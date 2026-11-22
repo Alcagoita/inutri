@@ -1,1 +1,1 @@
-^(#[0-9]+[: ]|Merge |Revert )
+^(INU-[0-9]+[: ]|Merge |Revert )
