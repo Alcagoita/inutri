@@ -36,7 +36,7 @@ The project has two protected lanes: `develop`, where finished work comes togeth
 1. Update `develop` (`git switch develop && git pull`).
 2. Branch from it: `INU-12-short-description`.
 3. Commit with the reference, push, open the pull request into `develop`.
-4. Merge only on the decider's word (`gh pr merge <n> --merge --admin`); the branch is deleted after the merge.
+4. Every pull request needs one approval from another team member. Merge only after that approval and on the decider's word (`gh pr merge <n> --merge`); the branch is deleted after the merge. Use `--admin` only when the decider explicitly says to merge without an approval.
 
 **A release** (when the decider says to publish):
 1. From an up-to-date `develop`, branch `release/X.Y.Z`. Pick the version yourself (patch for fixes, minor for features, major only on the decider's word) and say which.
@@ -57,7 +57,7 @@ The project has two protected lanes: `develop`, where finished work comes togeth
 1. One ticket at a time. Do not start the next until the current PR is merged.
 2. The ticket is the spec. Nothing outside it. If something is unclear, propose a change to the ticket instead of guessing.
 3. Check the ticket's real status in Jira before starting. Never trust a copy.
-4. Never merge on your own. Merge only when the decider says so: the owner.
+4. Never merge on your own. Merge only when the decider says so: the owner, after one approval from another team member.
 5. Unit tests for any logic, before the PR. Not during quick visual tweaks.
 6. Small slice first: run any job over a lot of data on a sample, check, then widen.
 7. When something breaks, ask what the person already knows before hunting. Root cause first, then the fix, then the tests.
