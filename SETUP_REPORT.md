@@ -9,7 +9,7 @@ Set up with Brush Frame (step 4 of the framework) on 22 November 2026.
 - [x] Project folder `~/Projects/inutri`, Git with `main`
 - [x] Repository https://github.com/Alcagoita/inutri (public)
 - [x] Two lanes: `develop` (default) and `main`
-- [x] Ruleset on `main` and `develop`: pull request required, checks `test` and `ticket-key` must pass, no direct push or deletion, only the owner merges (solo: 0 approvals)
+- [x] Ruleset on `main` and `develop`: pull request required, checks `test` and `ticket-key` must pass, no direct push or deletion, one approval required (team mode since 22 November 2026), only the owner decides the merge
 - [x] Branches deleted after merge; secret scanning and push protection on
 - [x] CI `test` job for Kotlin Multiplatform (Java 17 + Gradle, runs `./gradlew check` once a Gradle project exists)
 - [x] Ticket key check (CI) and local `commit-msg` hook: every commit and PR title starts with `INU-12: …`
@@ -43,4 +43,4 @@ Later. Options when ready: Firebase App Distribution, Google Play internal testi
 2. Clone the repository: `gh repo clone Alcagoita/inutri`.
 3. Run the Brush Frame setup skill in the clone: it finds the project already set up and only does what is personal to your computer (turns on the commit hook with `git config core.hooksPath .githooks`, Jira access, suggested skills).
 4. Ask the owner for access to the Jira project INU.
-5. When the team grows, the ruleset changes to require one approval on every pull request.
+5. Every pull request needs one approval from another team member before the owner merges it. Ask the owner to add you to the GitHub repository.
