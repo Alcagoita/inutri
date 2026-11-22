@@ -1,5 +1,5 @@
 ## Ticket
-<!-- The ticket this PR closes, e.g. #12: add the invite link -->
+<!-- The ticket this PR closes, e.g. INU-12: add the invite link -->
 
 ## What changed
 <!-- One or two sentences. Nothing outside the ticket. -->
