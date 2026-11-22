@@ -1,0 +1,25 @@
+# Installed by the framework setup. Unit tests on every PR and on pushes to main/develop.
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        run: |
+          if [ -f package-lock.json ]; then npm ci
+          elif [ -f package.json ]; then npm install
+          else echo "No package.json yet."; fi
+      - name: Unit tests
+        run: |
+          if [ -f package.json ]; then npm test --if-present
+          else echo "No tests yet. Add them with the first ticket that has logic."; fi

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Installed by the framework setup. Every commit starts with a ticket key.
+# The pattern lives in .github/ticket-key-pattern. Example: #12: add the invite link
+PATTERN_FILE="$(git rev-parse --show-toplevel)/.github/ticket-key-pattern"
+[ -f "$PATTERN_FILE" ] || exit 0
+PATTERN="$(head -1 "$PATTERN_FILE")"
+# First line that is not a git comment ("# ..."). "#12: ..." is a ticket key, not a comment.
+SUBJECT="$(sed -n '/^# /!{p;q;}' "$1")"
+if printf '%s' "$SUBJECT" | grep -Eq "$PATTERN"; then
+  exit 0
+fi
+echo "Commit refused: the message must start with a ticket key, e.g. \"#12: add the invite link\"." >&2
+echo "No ticket for this work? Open one first; the ticket system is the project's memory." >&2
+exit 1

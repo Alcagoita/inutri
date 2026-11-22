@@ -1,0 +1,12 @@
+# framework: secrets — keys live in local files outside version control
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+*.p12
+*.keystore
+!debug.keystore
+google-services.json.local
+service-account*.json
