@@ -14,7 +14,7 @@ reviews:
     - path: "**/*"
       instructions: >-
         Review against the ticket named in the PR title: flag changes outside its goal.
-        Check that logic has unit tests. Read AGENTS.md and flag anything that breaks a
+        Check that logic has unit tests. Read CLAUDE.md and flag anything that breaks a
         product promise or a model fact listed there.
 chat:
   auto_reply: true

@@ -10,4 +10,4 @@
 - [ ] No product promise broken (if one is touched: link the decision ticket)
 
 ## Waiting for
-The decider's word to merge.
+A decider's word (either owner) to merge, after the other owner's approval.
