@@ -3,9 +3,11 @@
 Read by every AI session in this project. Built on Brush Frame: https://github.com/Alcagoita/brush-frame
 
 ## Owners and decisions
-The project has **two owners with equal say**: Olegário Nascimento (GitHub `Alcagoita`) and Inês Nascimento (GitHub `inesmcn27-bit`). Either owner is a **decider**:
-- **Decision tickets:** whichever owner is in the session can decide (Avançar / Estacionar / Abandonar). Record who decided and why in the ticket. Never stop a decision because "the other owner" must make it; if an owner wants the other to weigh in, they say so.
+The project has **two owners with equal say on the product**: Olegário Nascimento (GitHub `Alcagoita`) and Inês Nascimento (GitHub `inesmcn27-bit`). Either owner is a **decider**:
+- **Decision tickets:** whichever owner is in the session decides (Avançar / Estacionar / Abandonar). **That decision is final**: it needs no input, review or confirmation from the other owner. Write the decision, who decided and why in the ticket, then carry on. Never write "to be decided by the project owner" or leave a decision waiting for the other owner.
+- **Ticket assignee:** every ticket is assigned to the person who created it (the owner in the session). When you create a ticket, set the assignee to the current Jira user; when you find one without an assignee, assign it to its reporter.
 - **Pull requests:** every pull request needs one approval from the owner who did not open it. After that approval, either owner can say merge.
+- **GitHub:** the repository belongs to Olegário's account, so only he is a GitHub admin (repository settings, merging without an approval). Inês has write access, which is enough to approve and to merge after approval.
 
 Both owners speak Portuguese (pt-PT): answer in the language they write in. Code, commits and pull requests are in English. The full product picture for the team is in [docs/visao-do-produto.md](docs/visao-do-produto.md).
 
