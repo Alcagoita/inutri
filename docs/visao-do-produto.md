@@ -42,6 +42,11 @@ Uma mudança que quebre uma promessa precisa primeiro de uma tarefa de decisão 
 - Dar conselhos médicos ou de dose na app.
 - Enviar dados de saúde para serviços fora da Europa.
 
+## Marca e tom
+Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O nome da app ainda está em aberto.
+- **Cores inspiradas na melancia:** verde casca, verde lima (só destaques), verde claro e salmão, com creme, semente (texto), amarelo mel e salmão claro como cores de apoio. Os códigos estão em [CLAUDE.md](../CLAUDE.md).
+- **Feedback semanal com curiosidade, não julgamento:** três estados sem vermelho (*Correu bem*, *A construir*, *Ficou para a próxima*), os comportamentos mantidos antes do peso, e cada paciente comparado só consigo próprio.
+
 ## Tecnologia e forma de trabalhar
 - **Kotlin Multiplatform**, para Android e iPhone.
 - **Código:** https://github.com/Alcagoita/inutri (público).

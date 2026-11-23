@@ -30,6 +30,14 @@ A change that breaks one needs a decision ticket first.
 - Weight, body measurements and medication are health data: the most sensitive kind of personal data (GDPR special category).
 - Built with **Kotlin Multiplatform** (Android and iOS). Where the professional side runs (desktop, web or the same app) is still open: decision ticket INU-2.
 
+## Brand and tone
+Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still open.
+- **Colours (watermelon palette):** rind green `#1F5135` (main: headings, buttons); lime `#A8D13C` (accents only: icons, achievements); light green `#DDEFC8` (backgrounds, "went well" state); salmon `#F28C7C` (human moments: messages from the professional, celebrations). Support colours: cream `#FBF6EE` (page background), seed `#2E2A26` (body text), honey `#F2C26B` ("building" state), light salmon `#FCE3DD` (professional's message cards).
+- **Contrast:** lime and salmon are never text colours on a light background; text is rind green or seed.
+- **Weekly feedback tone: curiosity, not judgement.** Three states, never red: *Correu bem*, *A construir*, *Ficou para a próxima*. Behaviours kept come before the weight chart. Compare a patient only with themselves, never with others. Show trends, not scores ("Mantiveste 4 dias, mais 1 do que na semana passada", never "Falhaste 3 dias"). End with an open question to the professional.
+- **Two voices:** sober and clear on the professional side; warm and encouraging in the patient app.
+- **Words never used:** "milagre", "rápido", "dose recomendada", or anything else that promises results or gives medical advice.
+
 ## Workflow
 - Tasks live in Jira, project **INU**: https://olegarioncnascimento.atlassian.net/jira/software/projects/INU. No work without a task.
 - The board has four columns: **To do, In development, Testing, Done**. Move the task yourself: **In development** when you start, **Testing** when the pull request opens, **Done** when it merges. If Jira can't be reached from here, tell the person which column to move it to.
