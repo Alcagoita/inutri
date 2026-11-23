@@ -4,7 +4,7 @@ Read by every AI session in this project. Built on Brush Frame: https://github.c
 
 ## Owners and decisions
 The project has **two owners with equal say on the product**: Olegário Nascimento (GitHub `Alcagoita`) and Inês Nascimento (GitHub `inesmcn27-bit`). Either owner is a **decider**:
-- **Decision tickets:** whichever owner is in the session decides (Avançar / Estacionar / Abandonar). **That decision is final**: it needs no input, review or confirmation from the other owner. Write the decision, who decided and why in the ticket, then carry on. Never write "to be decided by the project owner" or leave a decision waiting for the other owner.
+- **Decisions:** decisions are made in a brainstorming session with whichever owner is in it. **That owner's decision is final**: it needs no input, review or confirmation from the other owner. Write what was decided, who decided, the date and why in [docs/decisoes.md](docs/decisoes.md) (and in this file when it changes a rule, a promise or a model fact), then turn it into execution tasks. Never create a decision ticket, never write "to be decided by the project owner" and never leave a decision waiting for the other owner.
 - **Ticket assignee:** every ticket is assigned to the person who created it (the owner in the session). When you create a ticket, set the assignee to the current Jira user; when you find one without an assignee, assign it to its reporter.
 - **Pull requests:** every pull request needs one approval from the owner who did not open it. After that approval, either owner can say merge.
 - **GitHub:** the repository belongs to Olegário's account, so only he is a GitHub admin (repository settings, merging without an approval). Inês has write access, which is enough to approve and to merge after approval.
@@ -15,7 +15,7 @@ Both owners speak Portuguese (pt-PT): answer in the language they write in. Code
 A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional side**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.
 
 ## Product promises
-A change that breaks one needs a decision ticket first.
+A change that breaks one needs an owner's decision first, recorded in [docs/decisoes.md](docs/decisoes.md).
 - **Only the professional creates or changes a plan.** The patient can read it, never edit it.
 - **Every plan is built by hand for one patient.** Never generate, copy or suggest a plan automatically.
 - **Only the professional adds support documents and tools.** The patient can read them, never add or change them.
@@ -39,6 +39,7 @@ Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still o
 - **Words never used:** "milagre", "rápido", "dose recomendada", or anything else that promises results or gives medical advice.
 
 ## Workflow
+- **The board holds execution tasks only:** work with a visible result in the app or the website. Decisions come out of brainstorming (see Owners and decisions) and become execution tasks; they are never tickets themselves.
 - Tasks live in Jira, project **INU**: https://olegarioncnascimento.atlassian.net/jira/software/projects/INU. No work without a task.
 - The board has four columns: **To do, In development, Testing, Done**. Move the task yourself: **In development** when you start, **Testing** when the pull request opens, **Done** when it merges. If Jira can't be reached from here, tell the person which column to move it to.
 - Every commit and pull request title starts with the task's reference: `INU-12: …`. A hook and a CI check enforce it. Setup work uses `INU-0`.
@@ -77,13 +78,14 @@ The project has two protected lanes: `develop`, where finished work comes togeth
 6. Small slice first: run any job over a lot of data on a sample, check, then widen.
 7. When something breaks, ask what the person already knows before hunting. Root cause first, then the fix, then the tests.
 8. Never put keys, tokens or passwords in code, prompts, chat or this file. They live in local files that git ignores.
-9. Decisions go in tickets and in this file, never only in chat: the next session cannot see the chat.
+9. Decisions go in [docs/decisoes.md](docs/decisoes.md) and in this file, never only in chat: the next session cannot see the chat.
 10. Never use real patient data in tests, examples, fixtures, screenshots or prompts. Use made-up data only.
 11. Never add medical, medication or dose advice to the app, in any text, notification or feature.
 12. Never send health data to a service hosted outside Europe. Check where a service stores data before adding it.
 
 ## Memory
-Corrections that should hold for everyone become rules here, under Corrections, with why, the ticket and a review date. Decisions go in tickets. Personal preferences stay in each person's own tool memory. Never store ticket status, keys or tokens in any of them.
+Corrections that should hold for everyone become rules here, under Corrections, with why, the ticket and a review date. Decisions go in [docs/decisoes.md](docs/decisoes.md). Personal preferences stay in each person's own tool memory. Never store ticket status, keys or tokens in any of them.
 
 ## Corrections
 <!-- Each as: the rule — Why: … — Source: ticket, date — Review by: date. -->
+- **No decision tickets on the board.** Decisions are made in brainstorming and recorded in docs/decisoes.md; the Jira board holds only execution tasks with a visible result in the app or the website. — Why: the board should show the work being built, not discussions. — Source: Inês Nascimento, INU-0, 23 November 2026 — Review by: 23 February 2027.

@@ -7,7 +7,7 @@
 ## How it was checked
 - [ ] Unit tests cover the logic (or: why none are needed)
 - [ ] AI review comments answered, fixes pushed
-- [ ] No product promise broken (if one is touched: link the decision ticket)
+- [ ] No product promise broken (if one is touched: link the decision in docs/decisoes.md)
 
 ## Waiting for
 A decider's word (either owner) to merge, after the other owner's approval.
