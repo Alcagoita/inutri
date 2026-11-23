@@ -6,6 +6,29 @@ As mais recentes ficam no topo.
 
 ## 23 de novembro de 2026
 
+### Perguntas do feedback semanal
+- **Decisão:** o feedback semanal tem estas perguntas fixas. Os comportamentos vêm primeiro; o peso e o perímetro abdominal vêm no fim, são opcionais e aparecem já preenchidos se a paciente os registou nessa semana.
+- **Comuns aos dois grupos:**
+  1. Fome/apetite: baixo · equilibrado · alto
+  2. Energia: baixa · média · boa
+  3. Sono: mal · razoável · bem
+  4. Água ao longo do dia: dias em que conseguiu (0–7)
+  5. Atividade física: dias com pelo menos 30 minutos (0–7)
+  6. Adesão ao plano: dias em que seguiu o plano (0–7)
+  7. Principal dificuldade desta semana (texto livre)
+  8. O que correu bem? (texto livre)
+  9. O que quero melhorar na próxima semana? (texto livre)
+  10. Peso e perímetro abdominal (opcionais)
+  11. Queres dizer alguma coisa à Inês? (texto livre)
+- **Só para o grupo com GLP-1:**
+  - Proteína de acordo com o plano: dias em que conseguiu (0–7)
+  - Sintomas que sentiste com frequência esta semana (escolher os que se aplicam): náuseas · vómitos · enfartamento · obstipação · diarreia · refluxo · nenhum destes. Serve só para a nutricionista ajustar o plano; a app não dá nenhum conselho sobre sintomas.
+- **Só para o grupo sem GLP-1:**
+  - Comer entre refeições, fora do plano: dias (0–7)
+  - Houve momentos em que comeste por stress ou cansaço? nunca · às vezes · várias vezes
+- **Quem:** Inês Nascimento.
+- **Porquê:** desloca a atenção da paciente de "quanto perdi esta semana?" para "que comportamentos estou a conseguir manter?". As respostas em dias permitem mostrar tendências ("Mantiveste 4 dias, mais 1 do que na semana passada").
+
 ### Medidas registadas
 - **Decisão:** além do peso e dos perímetros (cintura/perímetro abdominal e anca), registam-se a **massa gorda** e a **massa muscular**.
 - **Quem:** Inês Nascimento.
