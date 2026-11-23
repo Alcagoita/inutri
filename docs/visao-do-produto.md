@@ -46,10 +46,10 @@ Uma mudança que quebre uma promessa precisa primeiro de uma tarefa de decisão 
 - **Kotlin Multiplatform**, para Android e iPhone.
 - **Código:** https://github.com/Alcagoita/inutri (público).
 - **Tarefas:** Jira, projeto **INU**, num quadro com quatro colunas: To do, In development, Testing, Done.
-- Cada mudança nasce de uma tarefa, vai num branch com o nome da tarefa (`INU-12-…`) e chega por pull request a `develop`. As verificações têm de passar, outra pessoa da equipa aprova, e o dono do projeto decide quando entra.
-- As regras completas para a IA estão em [AGENTS.md](../AGENTS.md).
+- Cada mudança nasce de uma tarefa, vai num branch com o nome da tarefa (`INU-12-…`) e chega por pull request a `develop`. As verificações têm de passar, o outro dono aprova, e qualquer um dos dois decide quando entra.
+- As regras completas para a IA estão em [CLAUDE.md](../CLAUDE.md).
 
 ## Em aberto
 - **Onde corre a parte do profissional:** computador, web ou a mesma app? Ver [INU-2](https://olegarioncnascimento.atlassian.net/browse/INU-2).
 - **O que entra na primeira versão.** Também em INU-2.
-- **Equipa:** a trabalhar em equipa desde 22 de novembro de 2026. Cada mudança precisa da aprovação de outra pessoa da equipa.
+- **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide as tarefas de decisão; cada mudança precisa da aprovação do outro.
