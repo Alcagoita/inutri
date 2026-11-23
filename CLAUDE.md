@@ -61,7 +61,7 @@ The project has two protected lanes: `develop`, where finished work comes togeth
 **Never:** push to `main` or `develop`, force-push a shared branch, rewrite published history, delete `main` or `develop`, or merge without the decider's word.
 
 ## Rules
-1. One ticket at a time. Do not start the next until the current PR is merged.
+1. One ticket per branch and per pull request. Several tickets and pull requests can be open at the same time across the team: start the next ticket without waiting for open pull requests to merge. Wait only when the new ticket needs work that is still in an unmerged pull request; then say which one it waits for.
 2. The ticket is the spec. Nothing outside it. If something is unclear, propose a change to the ticket instead of guessing.
 3. Check the ticket's real status in Jira before starting. Never trust a copy.
 4. Never merge on your own. Merge only when a decider (either owner) says so, after one approval from the other owner.
