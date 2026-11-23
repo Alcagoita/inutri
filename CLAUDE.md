@@ -12,7 +12,7 @@ The project has **two owners with equal say on the product**: Olegário Nascimen
 Both owners speak Portuguese (pt-PT): answer in the language they write in. Code, commits and pull requests are in English. The full product picture for the team is in [docs/visao-do-produto.md](docs/visao-do-produto.md).
 
 ## What this product is
-A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional side**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.
+A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional website**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.
 
 ## Product promises
 A change that breaks one needs a decision ticket first.
@@ -28,7 +28,13 @@ A change that breaks one needs a decision ticket first.
 - Whether a patient is on GLP-1 is recorded by the professional, and it changes the plan as well as the feedback questions.
 - For GLP-1 patients, the professional records each dose with its date, so doses can be compared over time with weight and body-measurement results.
 - Weight, body measurements and medication are health data: the most sensitive kind of personal data (GDPR special category).
-- Built with **Kotlin Multiplatform** (Android and iOS). Where the professional side runs (desktop, web or the same app) is still open: decision ticket INU-2.
+- Built with **Kotlin Multiplatform** (Android and iOS). The professional side is a **website** (decided in INU-2). The website and the app share one server, which stores health data in Europe.
+
+## First version
+Decided in INU-2 (Inês Nascimento, 23 November 2026). Anything outside this list waits for its own ticket.
+- **Professional website:** create patients, invite them to the app and build each patient's plan by hand (with start and end); upload support documents and tools per patient; record weight, body measurements and GLP-1 doses with dates, and see evolution charts; read the patients' weekly feedback.
+- **Patient app (Android and iOS):** read the plan and support documents; fill the weekly feedback (questions for the GLP-1 or non-GLP-1 group) and see the behaviours being kept; see their own evolution (weight and body measurements); a reminder on medication day (GLP-1 patients).
+- **Later, not in the first version:** messages between professional and patient (the open question at the end of the weekly feedback covers this for now); plan reports beyond the weekly feedback.
 
 ## Brand and tone
 Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still open.

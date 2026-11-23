@@ -7,7 +7,7 @@ Uma ferramenta de acompanhamento nutricional para pacientes em perda de peso, **
 
 Tem duas partes:
 
-**Parte do profissional** (para o nutricionista)
+**Parte do profissional** (website, para o nutricionista)
 - Criar o plano de cada paciente, sempre feito à medida.
 - Colocar documentos e ferramentas de apoio.
 - Registar peso, perímetros e, para quem faz GLP-1, as doses e as datas.
@@ -42,6 +42,12 @@ Uma mudança que quebre uma promessa precisa primeiro de uma tarefa de decisão 
 - Dar conselhos médicos ou de dose na app.
 - Enviar dados de saúde para serviços fora da Europa.
 
+## Primeira versão
+Decidido em [INU-2](https://olegarioncnascimento.atlassian.net/browse/INU-2). O website e a app ligam-se por um servidor comum, que guarda os dados de saúde na Europa.
+- **Website:** pacientes e planos (convite para a app, plano feito à mão com início e fim), documentos de apoio, registos de peso, perímetros e doses de GLP-1 com gráficos, e leitura dos feedbacks semanais.
+- **App do paciente:** plano e documentos (só leitura), feedback semanal com os comportamentos mantidos, a sua evolução, e o lembrete no dia da toma.
+- **Fica para depois:** mensagens entre nutricionista e paciente, e reports do plano além do feedback semanal.
+
 ## Marca e tom
 Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O nome da app ainda está em aberto.
 - **Cores inspiradas na melancia:** verde casca, verde lima (só destaques), verde claro e salmão, com creme, semente (texto), amarelo mel e salmão claro como cores de apoio. Os códigos estão em [CLAUDE.md](../CLAUDE.md).
@@ -55,6 +61,5 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 - As regras completas para a IA estão em [CLAUDE.md](../CLAUDE.md).
 
 ## Em aberto
-- **Onde corre a parte do profissional:** computador, web ou a mesma app? Ver [INU-2](https://olegarioncnascimento.atlassian.net/browse/INU-2).
-- **O que entra na primeira versão.** Também em INU-2.
+- **Nome da app e da marca.** Terá a sua própria tarefa de decisão.
 - **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide as tarefas de decisão; cada mudança precisa da aprovação do outro.
