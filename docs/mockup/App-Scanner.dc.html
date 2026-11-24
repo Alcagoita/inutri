@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>App · Código de barras</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #2E2A26; font-family: Nunito, system-ui, sans-serif; color: #2E2A26; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="flex: 1; display: flex; flex-direction: column; overflow: hidden">
+<div style="padding: 20px 20px 0; display: flex; align-items: center; justify-content: space-between">
+<a href="App-Compras.dc.html" style="color: #FBF6EE; font-weight: 700; font-size: 15px; text-decoration: none; padding: 8px 0">‹ Compras</a>
+<span style="color: #FBF6EE; font-weight: 800; font-size: 16px">Código de barras</span>
+<span style="width: 60px"></span>
+</div>
+
+<div role="img" aria-label="Câmara a ler um código de barras" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; min-height: 260px">
+<div style="width: 250px; height: 150px; border-radius: 20px; border: 3px solid #A8D13C; display: flex; align-items: center; justify-content: center; background: rgba(251,246,238,0.06)">
+<svg width="170" height="80" viewBox="0 0 170 80" aria-hidden="true"><g fill="#FBF6EE"><rect x="0" y="0" width="6" height="80"></rect><rect x="10" y="0" width="3" height="80"></rect><rect x="17" y="0" width="8" height="80"></rect><rect x="29" y="0" width="3" height="80"></rect><rect x="36" y="0" width="5" height="80"></rect><rect x="46" y="0" width="3" height="80"></rect><rect x="53" y="0" width="9" height="80"></rect><rect x="66" y="0" width="3" height="80"></rect><rect x="73" y="0" width="5" height="80"></rect><rect x="83" y="0" width="7" height="80"></rect><rect x="94" y="0" width="3" height="80"></rect><rect x="101" y="0" width="6" height="80"></rect><rect x="111" y="0" width="3" height="80"></rect><rect x="118" y="0" width="8" height="80"></rect><rect x="130" y="0" width="4" height="80"></rect><rect x="138" y="0" width="3" height="80"></rect><rect x="145" y="0" width="7" height="80"></rect><rect x="156" y="0" width="3" height="80"></rect><rect x="163" y="0" width="7" height="80"></rect></g><rect x="0" y="38" width="170" height="3" fill="#F28C7C"></rect></svg>
+</div>
+<span style="color: #FBF6EE; font-size: 15px">Aponta para o código de barras</span>
+</div>
+
+<section aria-labelledby="res" style="background: #FBF6EE; border-radius: 24px 24px 0 0; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<div style="width: 52px; height: 52px; flex: none; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l-1 4H8z"></path><path d="M8 7h8l1 14H7z"></path></svg></div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 id="res" style="margin: 0; font-size: 18px; font-weight: 800; color: #1F5135">Iogurte natural</h2>
+<span style="font-size: 13px; color: #5E574F">Produto de exemplo · 125 g</span>
+</div>
+</div>
+<div style="background: #DDEFC8; border-radius: 16px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="flex: none"><path d="m5 13 4 4L19 7"></path></svg>
+<div style="display: flex; flex-direction: column; gap: 2px; font-size: 14px; line-height: 1.4">
+<strong style="color: #1F5135; font-size: 15px">Está no teu plano</strong>
+<span>Faz parte do teu guia de compras. A Inês incluiu-o no <strong>pequeno-almoço</strong> e no <strong>lanche</strong>.</span>
+</div>
+</div>
+<div style="background: #FFFFFF; border-radius: 16px; padding: 12px 14px; font-size: 14px; line-height: 1.4">
+<strong style="color: #1F5135">Se não estiver no plano</strong>, a app diz-te só isso e podes perguntar à Inês no próximo feedback. Se a app ainda não conhecer o produto, a Inês recebe o código e liga-o a um alimento.
+</div>
+<button type="button" style="padding: 14px; border-radius: 99px; border: 0; background: #1F5135; color: #FBF6EE; font: inherit; font-weight: 800; font-size: 16px; cursor: pointer">Pôr no carrinho</button>
+</section>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

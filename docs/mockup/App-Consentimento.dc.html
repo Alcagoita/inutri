@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>App · Consentimento</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF6EE; font-family: Nunito, system-ui, sans-serif; color: #2E2A26; display: flex; flex-direction: column; padding: 40px 24px 32px; gap: 16px">
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; color: #5E574F">Primeiro acesso</span>
+<h1 style="margin: 0; font-size: 26px; font-weight: 800; color: #1F5135">Os teus dados, explicados</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.45">Antes de começar, lê como cuidamos dos teus dados. O peso, as medidas e a medicação são dados de saúde, por isso precisamos da tua autorização.</p>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{ points }}" as="p" hint-placeholder-count="4">
+<li style="background: #FFFFFF; border-radius: 16px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 15px; color: #1F5135">{{ p.t }}</strong>
+<span style="font-size: 14px; line-height: 1.4">{{ p.d }}</span>
+</li>
+</sc-for>
+</ul>
+
+<a href="#" style="font-weight: 700; font-size: 15px">Ler a política de privacidade completa</a>
+
+<label style="display: flex; gap: 12px; align-items: flex-start; background: #DDEFC8; border-radius: 16px; padding: 12px 14px; cursor: pointer">
+<input type="checkbox" checked="{{ agreed }}" onChange="{{ toggle }}" style="width: 22px; height: 22px; accent-color: #1F5135; flex: none; margin: 2px 0 0">
+<span style="font-size: 14px; line-height: 1.4">Autorizo o tratamento dos meus dados de saúde para o acompanhamento com a minha nutricionista.</span>
+</label>
+
+<a href="{{ next }}" aria-disabled="{{ disabled }}" style="{{ btnStyle }}">Continuar</a>
+<p style="margin: 0; font-size: 12px; color: #5E574F; text-align: center">Texto provisório: os textos finais vêm de um jurista.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { agreed: false };
+  }
+  renderVals() {
+    var self = this;
+    var on = self.state.agreed;
+    return {
+      points: [
+        { t: 'Quem vê', d: 'Só a tua nutricionista. Nunca comparamos os teus dados com os de outras pessoas.' },
+        { t: 'Onde ficam', d: 'Em servidores na Europa, protegidos.' },
+        { t: 'Para que servem', d: 'Para a tua nutricionista acompanhar o teu plano. A app não dá conselhos médicos.' },
+        { t: 'Os teus direitos', d: 'Podes pedir uma cópia dos teus dados ou apagar a conta nas definições da app, quando quiseres.' }
+      ],
+      agreed: on,
+      toggle: function () { self.setState({ agreed: !on }); },
+      next: on ? 'App-Inicio.dc.html' : '#',
+      disabled: on ? 'false' : 'true',
+      btnStyle: 'display: block; text-align: center; padding: 15px; border-radius: 99px; font-weight: 800; font-size: 17px; text-decoration: none; ' + (on ? 'background: #1F5135; color: #FBF6EE;' : 'background: #EFE9DE; color: #5E574F; pointer-events: none;')
+    };
+  }
+}
+</script>
+</body>
+</html>

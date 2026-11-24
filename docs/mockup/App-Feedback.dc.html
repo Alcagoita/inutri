@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>App · Feedback semanal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF6EE; font-family: Nunito, system-ui, sans-serif; color: #2E2A26; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="flex: 1; overflow-y: auto; padding: 28px 20px 16px; display: flex; flex-direction: column; gap: 12px">
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #5E574F">Semana 12 · 16 a 22 de novembro</span>
+<h1 style="margin: 0; font-size: 26px; font-weight: 800; color: #1F5135">Como correu a tua semana?</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.4">Sem certo nem errado. Só queremos perceber o que está a resultar.</p>
+</div>
+
+<sc-for list="{{ choices }}" as="q" hint-placeholder-count="3">
+<fieldset style="border: 0; margin: 0; padding: 12px 14px; background: #FFFFFF; border-radius: 18px; display: flex; flex-direction: column; gap: 8px">
+<legend style="float: left; padding: 0; font-weight: 800; font-size: 15px; color: #1F5135">{{ q.text }}</legend>
+<div style="clear: both; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<sc-for list="{{ q.options }}" as="o" hint-placeholder-count="3">
+<button type="button" aria-pressed="{{ o.pressed }}" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+</sc-for>
+</div>
+</fieldset>
+</sc-for>
+
+<sc-for list="{{ days }}" as="q" hint-placeholder-count="4">
+<fieldset style="border: 0; margin: 0; padding: 12px 14px; background: #FFFFFF; border-radius: 18px; display: flex; flex-direction: column; gap: 8px">
+<legend style="float: left; padding: 0; font-weight: 800; font-size: 15px; color: #1F5135">{{ q.text }}</legend>
+<span style="clear: both; font-size: 13px; color: #5E574F">{{ q.hint }}</span>
+<div style="display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px">
+<sc-for list="{{ q.options }}" as="o" hint-placeholder-count="8">
+<button type="button" aria-pressed="{{ o.pressed }}" aria-label="{{ o.aria }}" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+</sc-for>
+</div>
+</fieldset>
+</sc-for>
+
+<fieldset style="border: 0; margin: 0; padding: 12px 14px; background: #FFFFFF; border-radius: 18px; display: flex; flex-direction: column; gap: 8px">
+<legend style="float: left; padding: 0; font-weight: 800; font-size: 15px; color: #1F5135">Sintomas que sentiste com frequência esta semana</legend>
+<span style="clear: both; font-size: 13px; color: #5E574F">Escolhe os que se aplicam. A Inês usa isto para ajustar o teu plano.</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{ symptoms }}" as="o" hint-placeholder-count="7">
+<button type="button" aria-pressed="{{ o.pressed }}" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+</sc-for>
+</div>
+</fieldset>
+
+<sc-for list="{{ texts }}" as="t" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="{{ t.id }}" style="font-weight: 800; font-size: 15px; color: #1F5135">{{ t.label }}</label>
+<textarea id="{{ t.id }}" rows="2" placeholder="{{ t.ph }}" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 15px; background: #FFFFFF; resize: none"></textarea>
+</div>
+</sc-for>
+
+<fieldset style="border: 0; margin: 0; padding: 12px 14px; background: #FFFFFF; border-radius: 18px; display: flex; flex-direction: column; gap: 8px">
+<legend style="float: left; padding: 0; font-weight: 800; font-size: 15px; color: #1F5135">Peso e perímetro abdominal</legend>
+<span style="clear: both; font-size: 13px; color: #5E574F">Opcional. Já registaste o peso esta semana, por isso vem preenchido.</span>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+<label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 700">Peso (kg)<input inputmode="decimal" value="86,0" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 12px; font: inherit; font-size: 15px"></label>
+<label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 700">Perímetro abdominal (cm)<input inputmode="decimal" placeholder="—" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 12px; font: inherit; font-size: 15px"></label>
+</div>
+</fieldset>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="perg" style="font-weight: 800; font-size: 15px; color: #1F5135">Queres dizer alguma coisa à Inês?</label>
+<textarea id="perg" rows="2" placeholder="Uma dúvida, uma conquista, o que quiseres" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 15px; background: #FFFFFF; resize: none"></textarea>
+</div>
+
+<a href="App-Semana.dc.html" style="display: block; text-align: center; padding: 14px; border-radius: 99px; background: #1F5135; color: #FBF6EE; font-weight: 800; font-size: 16px; text-decoration: none">Enviar à Inês</a>
+</div>
+
+<nav aria-label="Separadores" style="background: #FFFFFF; border-top: 1px solid #EFE9DE; padding: 8px 4px 22px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))">
+<a href="App-Inicio.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #1F5135; font-size: 11px; font-weight: 800"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4z"></path></svg>Início</a>
+<a href="App-Plano.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"></path><path d="M9 9h6M9 13h6"></path></svg>Plano</a>
+<a href="App-Compras.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h11L21 8H7"></path><circle cx="9" cy="19.5" r="1.5"></circle><circle cx="17" cy="19.5" r="1.5"></circle></svg>Compras</a>
+<a href="App-Evolucao.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18 10 12l4 3 6-8"></path></svg>Evolução</a>
+<a href="App-Documentos.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path></svg>Documentos</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      choice: { 0: 1, 1: 2, 2: 1 },
+      days: { 0: 4, 1: 1, 2: 6, 3: 5 },
+      symptoms: { 'enfartamento': true }
+    };
+  }
+  renderVals() {
+    var self = this;
+    var choiceQs = [
+      ['Fome/apetite', ['Baixo', 'Equilibrado', 'Alto']],
+      ['Energia', ['Baixa', 'Média', 'Boa']],
+      ['Sono', ['Mal', 'Razoável', 'Bem']]
+    ];
+    var dayQs = [
+      ['Água ao longo do dia', 'Dias em que conseguiste'],
+      ['Atividade física', 'Dias com pelo menos 30 minutos'],
+      ['Adesão ao plano', 'Dias em que seguiste o plano'],
+      ['Proteína de acordo com o plano', 'Dias em que conseguiste']
+    ];
+    var symptomList = ['náuseas', 'vómitos', 'enfartamento', 'obstipação', 'diarreia', 'refluxo', 'nenhum destes'];
+    var on = 'background: #DDEFC8; border: 2px solid #1F5135;';
+    var off = 'background: #FFFFFF; border: 1px solid #D9D2C5;';
+    var btn = 'min-height: 44px; padding: 6px 4px; border-radius: 12px; font: inherit; font-size: 14px; font-weight: 700; color: #2E2A26; cursor: pointer; ';
+    var chip = 'min-height: 40px; padding: 6px 12px; border-radius: 99px; font: inherit; font-size: 14px; font-weight: 700; color: #2E2A26; cursor: pointer; ';
+    function set(key, k, v) {
+      var o = Object.assign({}, self.state[key]);
+      o[k] = v;
+      var st = {};
+      st[key] = o;
+      self.setState(st);
+    }
+    return {
+      choices: choiceQs.map(function (q, qi) {
+        return {
+          text: q[0],
+          options: q[1].map(function (label, oi) {
+            var sel = self.state.choice[qi] === oi;
+            return { label: label, pressed: sel ? 'true' : 'false', style: btn + (sel ? on : off), pick: function () { set('choice', qi, oi); } };
+          })
+        };
+      }),
+      days: dayQs.map(function (q, qi) {
+        return {
+          text: q[0],
+          hint: q[1],
+          options: [0, 1, 2, 3, 4, 5, 6, 7].map(function (d) {
+            var sel = self.state.days[qi] === d;
+            return { label: String(d), aria: d + ' dias', pressed: sel ? 'true' : 'false', style: 'min-height: 40px; padding: 0; border-radius: 10px; font: inherit; font-size: 15px; font-weight: 800; color: #2E2A26; cursor: pointer; ' + (sel ? on : off), pick: function () { set('days', qi, d); } };
+          })
+        };
+      }),
+      symptoms: symptomList.map(function (name) {
+        var sel = !!self.state.symptoms[name];
+        return {
+          label: name.charAt(0).toUpperCase() + name.slice(1),
+          pressed: sel ? 'true' : 'false',
+          style: chip + (sel ? on : off),
+          pick: function () {
+            var o = name === 'nenhum destes' ? {} : Object.assign({}, self.state.symptoms);
+            if (name !== 'nenhum destes') delete o['nenhum destes'];
+            o[name] = !sel;
+            self.setState({ symptoms: o });
+          }
+        };
+      }),
+      texts: [
+        { id: 'dif', label: 'Principal dificuldade desta semana', ph: 'Escreve à tua maneira' },
+        { id: 'bem', label: 'O que correu bem?', ph: 'Mesmo que seja pequeno' },
+        { id: 'mel', label: 'O que queres melhorar na próxima semana?', ph: 'Uma coisa chega' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

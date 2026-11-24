@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>App · A tua semana</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF6EE; font-family: Nunito, system-ui, sans-serif; color: #2E2A26; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="flex: 1; overflow: hidden; padding: 28px 20px 12px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #5E574F">Semana 12 · 16 a 22 de novembro</span>
+<h1 style="margin: 0; font-size: 26px; font-weight: 800; color: #1F5135">O que estás a conseguir manter</h1>
+</div>
+
+<section aria-label="Comportamentos" style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{ habits }}" as="h" hint-placeholder-count="4">
+<div style="background: #FFFFFF; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<strong style="font-size: 15px; color: #1F5135">{{ h.name }}</strong>
+<span style="{{ h.chipStyle }}">{{ h.state }}</span>
+</div>
+<div style="display: flex; gap: 6px" role="img" aria-label="{{ h.aria }}">
+<sc-for list="{{ h.days }}" as="d" hint-placeholder-count="7">
+<span style="{{ d.style }}"></span>
+</sc-for>
+</div>
+<span style="font-size: 14px; line-height: 1.35">{{ h.trend }}</span>
+</div>
+</sc-for>
+</section>
+
+<section aria-labelledby="pe" style="background: #FFFFFF; border-radius: 18px; padding: 14px 16px; display: flex; align-items: center; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1">
+<h2 id="pe" style="margin: 0; font-size: 15px; font-weight: 800; color: #1F5135">E o peso?</h2>
+<span style="font-size: 14px">Continua a descer devagar, como esperado.</span>
+</div>
+<svg width="96" height="40" viewBox="0 0 96 40" role="img" aria-label="Tendência de descida nas últimas semanas"><polyline points="4,8 20,12 36,17 52,22 68,26 92,32" fill="none" stroke="#1F5135" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline><circle cx="92" cy="32" r="4" fill="#A8D13C" stroke="#1F5135" stroke-width="1.5"></circle></svg>
+</section>
+
+<section aria-labelledby="msg" style="background: #FCE3DD; border-radius: 18px; padding: 14px 16px; display: flex; gap: 12px">
+<div style="width: 36px; height: 36px; flex: none; border-radius: 50%; background: #F28C7C; display: flex; align-items: center; justify-content: center; color: #2E2A26; font-weight: 800; font-size: 13px">IN</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<h2 id="msg" style="margin: 0; font-size: 15px; font-weight: 800; color: #1F5135">A Inês respondeu ao teu feedback</h2>
+<span style="font-size: 14px; line-height: 1.4">Sim, fruta com iogurte é uma ótima troca para o lanche. Seis dias a seguir o plano é enorme!</span>
+</div>
+</section>
+</div>
+
+<nav aria-label="Separadores" style="background: #FFFFFF; border-top: 1px solid #EFE9DE; padding: 8px 4px 22px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))">
+<a href="App-Inicio.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #1F5135; font-size: 11px; font-weight: 800"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4z"></path></svg>Início</a>
+<a href="App-Plano.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"></path><path d="M9 9h6M9 13h6"></path></svg>Plano</a>
+<a href="App-Compras.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h11L21 8H7"></path><circle cx="9" cy="19.5" r="1.5"></circle><circle cx="17" cy="19.5" r="1.5"></circle></svg>Compras</a>
+<a href="App-Evolucao.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18 10 12l4 3 6-8"></path></svg>Evolução</a>
+<a href="App-Documentos.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path></svg>Documentos</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var states = {
+      bem: { label: 'Correu bem', bg: '#DDEFC8' },
+      construir: { label: 'A construir', bg: '#F2C26B' },
+      proxima: { label: 'Ficou para a próxima', bg: '#FCE3DD' }
+    };
+    var rows = [
+      { name: 'Adesão ao plano', state: 'bem', kept: 6, trend: 'Mantiveste 6 dias, mais 2 do que na semana passada.' },
+      { name: 'Proteína de acordo com o plano', state: 'bem', kept: 5, trend: 'Mantiveste 5 dias, igual à semana passada.' },
+      { name: 'Água ao longo do dia', state: 'construir', kept: 4, trend: 'Mantiveste 4 dias, mais 1 do que na semana passada.' },
+      { name: 'Atividade física (30 min)', state: 'proxima', kept: 1, trend: 'Esta semana foi 1 dia. Que tal escolher já o dia da próxima?' }
+    ];
+    return {
+      habits: rows.map(function (r) {
+        var s = states[r.state];
+        var days = [];
+        for (var i = 0; i < 7; i++) {
+          days.push({ style: 'flex: 1; height: 10px; border-radius: 99px; background: ' + (i < r.kept ? '#1F5135' : '#EFE9DE') + ';' });
+        }
+        return {
+          name: r.name,
+          state: s.label,
+          chipStyle: 'font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 99px; white-space: nowrap; color: #2E2A26; background: ' + s.bg + ';',
+          days: days,
+          aria: r.kept + ' de 7 dias',
+          trend: r.trend
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Ficha da paciente</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #FBF6EE; font-family: Inter, system-ui, sans-serif; color: #2E2A26; font-size: 15px">
+
+<header style="background: #1F5135; color: #FBF6EE">
+<div style="max-width: 1440px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 10 A11 11 0 0 0 25 10 Z" fill="#DDEFC8"></path><path d="M3 10 A11 11 0 0 0 25 10" fill="none" stroke="#A8D13C" stroke-width="2.5"></path><circle cx="10" cy="14" r="1.3" fill="#2E2A26"></circle><circle cx="14" cy="17" r="1.3" fill="#2E2A26"></circle><circle cx="18" cy="14" r="1.3" fill="#2E2A26"></circle></svg>
+inutri
+</div>
+<nav aria-label="Principal" style="display: flex; gap: 4px; flex-wrap: wrap">
+<a href="Site-Pacientes.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px; background: rgba(251,246,238,0.14); font-weight: 600">Pacientes</a>
+<a href="Site-Alimentos.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Alimentos</a>
+<a href="#" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Documentos</a>
+<a href="Site-Reports.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Reports</a>
+<a href="Site-Utilizadores.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Utilizadores</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<div style="width: 34px; height: 34px; border-radius: 50%; background: #DDEFC8; color: #1F5135; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">IN</div>
+<span style="font-weight: 500">Inês Nascimento</span>
+</div>
+</div>
+</header>
+
+<div style="max-width: 1440px; margin: 0 auto; padding: 28px 32px 48px; display: flex; flex-wrap: wrap; gap: 28px; box-sizing: border-box">
+
+<aside style="flex: 1 1 260px; max-width: 300px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<h2 style="margin: 0; font-size: 16px; color: #1F5135">Pacientes</h2>
+<span style="font-size: 13px; color: #5E574F">4 ativos</span>
+</div>
+<label for="procura" style="font-size: 13px; color: #5E574F">Procurar paciente</label>
+<input id="procura" type="search" placeholder="Nome" style="margin-top: -8px; padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; background: #FFFFFF; font: inherit">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 2px solid #1F5135; text-decoration: none; color: #2E2A26"><span style="font-weight: 600">Ana Martins</span><span style="font-size: 12px; font-weight: 600; color: #1F5135; background: #DDEFC8; padding: 3px 8px; border-radius: 99px">GLP-1</span></a></li>
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E8E1D4; text-decoration: none; color: #2E2A26"><span>Bruno Costa</span><span style="font-size: 12px; color: #5E574F">feedback novo</span></a></li>
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E8E1D4; text-decoration: none; color: #2E2A26"><span>Carla Sousa</span><span style="font-size: 12px; font-weight: 600; color: #1F5135; background: #DDEFC8; padding: 3px 8px; border-radius: 99px">GLP-1</span></a></li>
+<li><a href="#" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E8E1D4; text-decoration: none; color: #2E2A26"><span>Diogo Reis</span><span style="font-size: 12px; color: #5E574F">plano acaba em 5 dias</span></a></li>
+</ul>
+<button type="button" style="margin-top: 4px; padding: 12px 16px; border-radius: 10px; border: 1.5px dashed #1F5135; background: transparent; color: #1F5135; font: inherit; font-weight: 600; cursor: pointer">+ Criar e convidar paciente</button>
+</aside>
+
+<main style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h1 style="margin: 0; font-size: 30px; color: #1F5135; letter-spacing: -0.02em">Ana Martins</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px">
+<span style="background: #DDEFC8; color: #1F5135; font-weight: 600; padding: 4px 10px; border-radius: 99px">Com GLP-1</span>
+<span style="background: #FFFFFF; border: 1px solid #E8E1D4; padding: 4px 10px; border-radius: 99px">Plano ativo · 1 set – 15 dez 2026</span>
+<span style="background: #FFFFFF; border: 1px solid #E8E1D4; padding: 4px 10px; border-radius: 99px">App ativa desde 1 set</span>
+<span style="background: #FFFFFF; border: 1px solid #E8E1D4; padding: 4px 10px; border-radius: 99px">Próxima consulta · 7 dez 2026</span>
+</div>
+</div>
+<div style="margin-left: auto; display: flex; gap: 10px; flex-wrap: wrap">
+<a href="Site-Ficha.dc.html" style="padding: 11px 16px; border-radius: 10px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Ficha clínica</a>
+<button type="button" style="padding: 11px 16px; border-radius: 10px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-weight: 600; cursor: pointer">Registar medições</button>
+<a href="Site-Plano.dc.html" style="padding: 11px 16px; border-radius: 10px; background: #1F5135; color: #FBF6EE; font-weight: 600; text-decoration: none">Editar plano</a>
+</div>
+</div>
+
+<nav aria-label="Página da Ana Martins" style="display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid #E8E1D4">
+<a href="Main.dc.html" aria-current="page" style="padding: 12px 16px; text-decoration: none; font-weight: 600; color: #1F5135; border-bottom: 3px solid #1F5135; margin-bottom: -1px">Resumo e evolução</a>
+<a href="Site-Plano.dc.html" style="padding: 12px 16px; text-decoration: none; color: #5E574F; border-bottom: 3px solid transparent; margin-bottom: -1px">Plano</a>
+<a href="#docs" style="padding: 12px 16px; text-decoration: none; color: #5E574F; border-bottom: 3px solid transparent; margin-bottom: -1px">Documentos</a>
+<a href="Site-Ficha.dc.html" style="padding: 12px 16px; text-decoration: none; color: #5E574F; border-bottom: 3px solid transparent; margin-bottom: -1px">Ficha clínica (privada)</a>
+</nav>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+<div style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #5E574F">Peso (16 nov)</span>
+<span style="font-size: 26px; font-weight: 700; color: #1F5135">86,1 kg</span>
+<span style="font-size: 13px">−6,3 kg desde 1 set</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #5E574F">Perímetro da cintura</span>
+<span style="font-size: 26px; font-weight: 700; color: #1F5135">94 cm</span>
+<span style="font-size: 13px">−7 cm desde 1 set</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #5E574F">Última dose registada</span>
+<span style="font-size: 26px; font-weight: 700; color: #1F5135">5 mg</span>
+<span style="font-size: 13px">a 27 out · registada por si</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; color: #5E574F">Feedback semanal</span>
+<span style="font-size: 26px; font-weight: 700; color: #1F5135">Semana 12</span>
+<span style="font-size: 13px">enviado há 2 dias</span>
+</div>
+</div>
+
+<section aria-labelledby="evo" style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 20px 22px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<h2 id="evo" style="margin: 0; font-size: 17px; color: #1F5135">Evolução do peso e doses de GLP-1</h2>
+<div role="group" aria-label="Medida no gráfico" style="margin-left: auto; display: flex; gap: 4px; background: #FBF6EE; padding: 4px; border-radius: 10px">
+<button type="button" style="border: 0; padding: 6px 12px; border-radius: 8px; background: #1F5135; color: #FBF6EE; font: inherit; font-size: 13px; font-weight: 600">Peso</button>
+<button type="button" style="border: 0; padding: 6px 12px; border-radius: 8px; background: transparent; color: #2E2A26; font: inherit; font-size: 13px">Cintura</button>
+<button type="button" style="border: 0; padding: 6px 12px; border-radius: 8px; background: transparent; color: #2E2A26; font: inherit; font-size: 13px">Anca</button>
+<button type="button" style="border: 0; padding: 6px 12px; border-radius: 8px; background: transparent; color: #2E2A26; font: inherit; font-size: 13px">Massa gorda</button>
+<button type="button" style="border: 0; padding: 6px 12px; border-radius: 8px; background: transparent; color: #2E2A26; font: inherit; font-size: 13px">Massa muscular</button>
+</div>
+<div role="group" aria-label="Unidade da composição corporal" style="display: flex; align-items: center; gap: 4px; font-size: 13px; color: #5E574F">Composição em <button type="button" aria-pressed="true" style="border: 1px solid #1F5135; padding: 4px 10px; border-radius: 8px; background: #1F5135; color: #FBF6EE; font: inherit; font-size: 13px; font-weight: 600">kg</button><button type="button" aria-pressed="false" style="border: 1px solid #D9D2C5; padding: 4px 10px; border-radius: 8px; background: #FFFFFF; color: #2E2A26; font: inherit; font-size: 13px">%</button></div>
+</div>
+<svg viewBox="0 0 800 250" role="img" aria-label="Peso desce de 92,4 kg a 1 de setembro para 86,1 kg a 16 de novembro; doses registadas a 1 set, 29 set e 27 out" style="width: 100%; height: auto; display: block">
+<g stroke="#EFE9DE" stroke-width="1">
+<line x1="40" y1="42.5" x2="780" y2="42.5"></line>
+<line x1="40" y1="87.5" x2="780" y2="87.5"></line>
+<line x1="40" y1="132.5" x2="780" y2="132.5"></line>
+<line x1="40" y1="177.5" x2="780" y2="177.5"></line>
+</g>
+<g font-family="Inter, sans-serif" font-size="11" fill="#5E574F">
+<text x="4" y="46">92 kg</text>
+<text x="4" y="91">90</text>
+<text x="4" y="136">88</text>
+<text x="4" y="181">86</text>
+<text x="40" y="244">1 set</text>
+<text x="290" y="244">29 set</text>
+<text x="545" y="244">27 out</text>
+<text x="735" y="244">16 nov</text>
+</g>
+<polyline fill="none" stroke="#1F5135" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="40,33.5 105.5,47 170.9,65 236.4,74 301.8,89.75 367.3,98.75 432.7,116.75 498.2,123.5 563.6,141.5 629.1,155 694.5,164 760,175.25"></polyline>
+<g fill="#FFFFFF" stroke="#1F5135" stroke-width="2">
+<circle cx="40" cy="33.5" r="4"></circle><circle cx="105.5" cy="47" r="4"></circle><circle cx="170.9" cy="65" r="4"></circle><circle cx="236.4" cy="74" r="4"></circle><circle cx="301.8" cy="89.75" r="4"></circle><circle cx="367.3" cy="98.75" r="4"></circle><circle cx="432.7" cy="116.75" r="4"></circle><circle cx="498.2" cy="123.5" r="4"></circle><circle cx="563.6" cy="141.5" r="4"></circle><circle cx="629.1" cy="155" r="4"></circle><circle cx="694.5" cy="164" r="4"></circle><circle cx="760" cy="175.25" r="5" fill="#1F5135"></circle>
+</g>
+<g stroke="#1F5135" stroke-width="1" stroke-dasharray="3 4">
+<line x1="40" y1="200" x2="40" y2="40"></line>
+<line x1="301.8" y1="200" x2="301.8" y2="95"></line>
+<line x1="563.6" y1="200" x2="563.6" y2="147"></line>
+</g>
+<g fill="#A8D13C" stroke="#1F5135" stroke-width="1.5">
+<rect x="33" y="207" width="14" height="14" rx="3" transform="rotate(45 40 214)"></rect>
+<rect x="294.8" y="207" width="14" height="14" rx="3" transform="rotate(45 301.8 214)"></rect>
+<rect x="556.6" y="207" width="14" height="14" rx="3" transform="rotate(45 563.6 214)"></rect>
+</g>
+<g font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1F5135">
+<text x="54" y="218">2,5 mg</text>
+<text x="316" y="218">5 mg</text>
+<text x="578" y="218">5 mg</text>
+</g>
+</svg>
+<div style="display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; color: #5E574F">
+<span style="display: flex; align-items: center; gap: 6px"><svg width="18" height="4" aria-hidden="true"><rect width="18" height="4" rx="2" fill="#1F5135"></rect></svg>Peso semanal</span>
+<span style="display: flex; align-items: center; gap: 6px"><svg width="12" height="12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" fill="#A8D13C" stroke="#1F5135" transform="rotate(45 6 6)"></rect></svg>Dose registada por si (também visível na app)</span>
+</div>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; gap: 22px">
+
+<section aria-labelledby="fb" style="flex: 3 1 420px; min-width: 0; background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 20px 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+<h2 id="fb" style="margin: 0; font-size: 17px; color: #1F5135">Feedback da semana 12</h2>
+<span style="font-size: 13px; color: #5E574F">16–22 nov · perguntas do grupo com GLP-1</span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Fome/apetite</span><span style="font-size: 13px; font-weight: 600; color: #1F5135; background: #DDEFC8; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Equilibrado</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Energia</span><span style="font-size: 13px; font-weight: 600; color: #1F5135; background: #DDEFC8; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Boa</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Sono</span><span style="font-size: 13px; font-weight: 600; color: #2E2A26; background: #F2C26B; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Razoável</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Água ao longo do dia</span><span style="font-size: 13px; font-weight: 600; color: #2E2A26; background: #F2C26B; padding: 4px 10px; border-radius: 99px; white-space: nowrap">A construir · 4 dias</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Atividade física (30 min)</span><span style="font-size: 13px; font-weight: 600; color: #2E2A26; background: #FCE3DD; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Ficou para a próxima · 1 dia</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Adesão ao plano</span><span style="font-size: 13px; font-weight: 600; color: #1F5135; background: #DDEFC8; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Correu bem · 6 dias</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Proteína de acordo com o plano</span><span style="font-size: 13px; font-weight: 600; color: #1F5135; background: #DDEFC8; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Correu bem · 5 dias</span></li>
+<li style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EFE9DE"><span>Sintomas frequentes</span><span style="font-size: 13px; font-weight: 600; color: #2E2A26; background: #FFFFFF; border: 1px solid #D9D2C5; padding: 4px 10px; border-radius: 99px; white-space: nowrap">Enfartamento</span></li>
+</ul>
+<p style="margin: 0; font-size: 14px; line-height: 1.5"><strong style="color: #1F5135">Principal dificuldade:</strong> pouco tempo ao fim do dia.</p>
+<div style="background: #FBF6EE; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; color: #1F5135">Pergunta aberta da Ana</span>
+<p style="margin: 0; line-height: 1.5">«Posso trocar o lanche da tarde por fruta com iogurte?»</p>
+<a href="Site-Reports.dc.html" style="font-size: 13px; font-weight: 600">Responder nos Reports (a Ana vê a resposta na app)</a>
+</div>
+</section>
+
+<section aria-labelledby="docs" style="flex: 2 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 20px 22px; display: flex; flex-direction: column; gap: 12px">
+<h2 id="docs" style="margin: 0; font-size: 17px; color: #1F5135">Documentos e ferramentas</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<li style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #EFE9DE; border-radius: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path></svg><span style="flex: 1">Lista de compras da semana</span><span style="font-size: 12px; color: #5E574F">PDF</span></li>
+<li style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #EFE9DE; border-radius: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="1.8" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path></svg><span style="flex: 1">Guia do prato equilibrado</span><span style="font-size: 12px; color: #5E574F">PDF</span></li>
+<li style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #EFE9DE; border-radius: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span style="flex: 1">Registo de sinais de fome</span><span style="font-size: 12px; color: #5E574F">Ferramenta</span></li>
+</ul>
+<button type="button" style="padding: 11px 16px; border-radius: 10px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-weight: 600; cursor: pointer">Carregar documento para a Ana</button>
+</section>
+
+</div>
+
+<section aria-labelledby="reg" style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 20px 22px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<h2 id="reg" style="margin: 0; font-size: 17px; color: #1F5135">Registos</h2>
+<span style="font-size: 13px; color: #5E574F">Feitos por si no website ou pela Ana na app</span>
+<button type="button" style="margin-left: auto; padding: 8px 12px; border-radius: 8px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">+ Registar medição</button>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 820px">
+<thead><tr style="text-align: left; color: #5E574F; font-size: 13px"><th style="padding: 8px 10px; font-weight: 600">Data</th><th style="padding: 8px 10px; font-weight: 600">Peso</th><th style="padding: 8px 10px; font-weight: 600">Cintura</th><th style="padding: 8px 10px; font-weight: 600">Anca</th><th style="padding: 8px 10px; font-weight: 600">Massa gorda</th><th style="padding: 8px 10px; font-weight: 600">Massa muscular</th><th style="padding: 8px 10px; font-weight: 600">Dose GLP-1</th><th style="padding: 8px 10px; font-weight: 600">Registado por</th></tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #EFE9DE; background: #FBF6EE"><td style="padding: 10px">23 nov 2026</td><td style="padding: 10px">86,0 kg</td><td style="padding: 10px">94 cm</td><td style="padding: 10px; color: #5E574F">—</td><td style="padding: 10px; color: #5E574F">—</td><td style="padding: 10px; color: #5E574F">—</td><td style="padding: 10px; color: #5E574F">—</td><td style="padding: 10px">Ana, na app · <a href="Site-Reports.dc.html" style="font-weight: 600">por confirmar</a></td></tr>
+<tr style="border-top: 1px solid #EFE9DE"><td style="padding: 10px">16 nov 2026</td><td style="padding: 10px">86,1 kg</td><td style="padding: 10px">94 cm</td><td style="padding: 10px">108 cm</td><td style="padding: 10px">31,2 kg</td><td style="padding: 10px">25,8 kg</td><td style="padding: 10px; color: #5E574F">—</td><td style="padding: 10px">Inês, na consulta</td></tr>
+<tr style="border-top: 1px solid #EFE9DE"><td style="padding: 10px">27 out 2026</td><td style="padding: 10px">87,6 kg</td><td style="padding: 10px">96 cm</td><td style="padding: 10px">110 cm</td><td style="padding: 10px">32,0 kg</td><td style="padding: 10px">25,7 kg</td><td style="padding: 10px">5 mg</td><td style="padding: 10px">Inês, na consulta</td></tr>
+<tr style="border-top: 1px solid #EFE9DE"><td style="padding: 10px">29 set 2026</td><td style="padding: 10px">89,9 kg</td><td style="padding: 10px">98 cm</td><td style="padding: 10px">112 cm</td><td style="padding: 10px">32,9 kg</td><td style="padding: 10px">25,6 kg</td><td style="padding: 10px">5 mg</td><td style="padding: 10px">Inês, na consulta</td></tr>
+<tr style="border-top: 1px solid #EFE9DE"><td style="padding: 10px">1 set 2026</td><td style="padding: 10px">92,4 kg</td><td style="padding: 10px">101 cm</td><td style="padding: 10px">114 cm</td><td style="padding: 10px">33,6 kg</td><td style="padding: 10px">25,5 kg</td><td style="padding: 10px">2,5 mg</td><td style="padding: 10px">Inês, na consulta</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

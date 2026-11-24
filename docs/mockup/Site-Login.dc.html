@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Entrar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; font-family: Inter, system-ui, sans-serif; color: #2E2A26; font-size: 15px; background: #FBF6EE">
+
+<div style="flex: 1 1 420px; background: #1F5135; color: #FBF6EE; padding: 56px 48px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; min-height: 320px">
+<div style="display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 24px">
+<svg width="36" height="36" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 10 A11 11 0 0 0 25 10 Z" fill="#DDEFC8"></path><path d="M3 10 A11 11 0 0 0 25 10" fill="none" stroke="#A8D13C" stroke-width="2.5"></path><circle cx="10" cy="14" r="1.3" fill="#2E2A26"></circle><circle cx="14" cy="17" r="1.3" fill="#2E2A26"></circle><circle cx="18" cy="14" r="1.3" fill="#2E2A26"></circle></svg>
+inutri
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 460px">
+<p style="margin: 0; font-size: 34px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em">Acompanhamento nutricional, feito à mão para cada paciente.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; color: #DDEFC8">Área reservada à nutricionista. Os dados de saúde ficam guardados na Europa.</p>
+</div>
+</div>
+
+<div style="flex: 1 1 420px; display: flex; align-items: center; justify-content: center; padding: 48px 24px; box-sizing: border-box">
+<form style="width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 16px">
+<h1 style="margin: 0; font-size: 28px; color: #1F5135; letter-spacing: -0.02em">Entrar</h1>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="em" style="font-size: 14px; font-weight: 500">Email</label>
+<input id="em" type="email" autocomplete="username" value="ines@exemplo.pt" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit; background: #FFFFFF">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<label for="pw" style="font-size: 14px; font-weight: 500">Palavra-passe</label>
+<a href="#" style="font-size: 14px">Esqueci-me da palavra-passe</a>
+</div>
+<input id="pw" type="password" autocomplete="current-password" value="exemplo-ficticio" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit; background: #FFFFFF">
+</div>
+<a href="Site-Pacientes.dc.html" style="text-align: center; padding: 13px 16px; border-radius: 10px; background: #1F5135; color: #FBF6EE; font-weight: 600; text-decoration: none">Entrar</a>
+<div style="display: flex; gap: 12px; align-items: flex-start; background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 12px; padding: 14px 16px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex: none"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"></path><path d="m9 12 2 2 4-4"></path></svg>
+<p style="margin: 0; font-size: 14px; line-height: 1.5">A seguir pedimos o segundo passo: a sua <strong>passkey</strong> (impressão digital, Touch ID ou Windows Hello) ou, em alternativa, um <strong>código enviado por email</strong>. É obrigatório, porque aqui há dados de saúde. A sessão fica aberta 7 dias neste computador.</p>
+</div>
+</form>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
