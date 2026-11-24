@@ -7,7 +7,7 @@ Uma ferramenta de acompanhamento nutricional para pacientes em perda de peso, **
 
 Tem duas partes:
 
-**Parte do profissional** (para o nutricionista)
+**Parte do profissional** (website, para o nutricionista)
 - Criar o plano de cada paciente, sempre feito à medida.
 - Colocar documentos e ferramentas de apoio.
 - Registar peso, perímetros e, para quem faz GLP-1, as doses e as datas.
@@ -42,6 +42,13 @@ Uma mudança que quebre uma promessa precisa primeiro de uma decisão de um dos 
 - Dar conselhos médicos ou de dose na app.
 - Enviar dados de saúde para serviços fora da Europa.
 
+## Primeira versão
+Decidida pela Inês (INU-2, INU-4 e brainstorming de 24/11/2026, ver [decisoes.md](decisoes.md)). Tarefas de execução: INU-5 a INU-22. O website e a app ligam-se por um servidor comum, que guarda os dados de saúde na Europa.
+- **Website:** login com verificação em dois passos; lista de pacientes e convite para a app; página de cada paciente (resumo e evolução, plano, documentos, ficha clínica privada); base de alimentos (tabela INSA, edição, alimentos à mão, supermercados); plano como dia tipo em folha de cálculo; medições (peso, cintura, anca, massa gorda, massa muscular) e doses de GLP-1 com gráficos; documentos de apoio; reports com os feedbacks, as medições das pacientes e as perguntas.
+- **App da paciente:** login e recuperação da palavra-passe; plano e documentos (só leitura); feedback semanal e o que está a manter; evolução com as doses e registo de medições; lembrete no dia da toma; guia de compras por supermercado; leitor de código de barras.
+- **Nos dois:** consentimento e privacidade antes de entrarem dados reais.
+- **Fica para depois:** diário alimentar com fotos e kcal estimadas pela IA; gestor da equipa no website; mensagens entre nutricionista e paciente.
+
 ## Marca e tom
 Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O nome da app ainda está em aberto.
 - **Cores inspiradas na melancia:** verde casca, verde lima (só destaques), verde claro e salmão, com creme, semente (texto), amarelo mel e salmão claro como cores de apoio. Os códigos estão em [CLAUDE.md](../CLAUDE.md).
@@ -55,6 +62,5 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 - As regras completas para a IA estão em [CLAUDE.md](../CLAUDE.md).
 
 ## Em aberto
-- **Onde corre a parte do profissional:** computador, web ou a mesma app? Ver [INU-2](https://olegarioncnascimento.atlassian.net/browse/INU-2).
-- **O que entra na primeira versão.** Também em INU-2.
+- **Nome da app e da marca.** Ainda por decidir em brainstorming.
 - **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide em brainstorming; cada mudança precisa da aprovação do outro. O quadro do Jira só tem tarefas de execução.

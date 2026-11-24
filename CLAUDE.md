@@ -12,7 +12,7 @@ The project has **two owners with equal say on the product**: Olegário Nascimen
 Both owners speak Portuguese (pt-PT): answer in the language they write in. Code, commits and pull requests are in English. The full product picture for the team is in [docs/visao-do-produto.md](docs/visao-do-produto.md).
 
 ## What this product is
-A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional side**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.
+A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional website**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.
 
 ## Product promises
 A change that breaks one needs an owner's decision first, recorded in [docs/decisoes.md](docs/decisoes.md).
@@ -24,11 +24,22 @@ A change that breaks one needs an owner's decision first, recorded in [docs/deci
 ## Model facts
 - Each patient has exactly one professional.
 - A plan has a start and an end. A patient follows one plan at a time.
-- Feedback is weekly, with a fixed set of questions per group: one set for patients on GLP-1, another for patients without.
+- A plan is **one typical day** (meals with foods and quantities in grams), built by the professional in a spreadsheet that adds up energy and macronutrients from the food database. The food database starts from the INSA food composition table (licence to confirm), can be edited, takes foods added by hand, and records in which supermarkets the professional finds each food.
+- Feedback is weekly, with a fixed set of questions per group: one set for patients on GLP-1, another for patients without. The questions are listed in [docs/decisoes.md](docs/decisoes.md) ("Perguntas do feedback semanal"). Behaviours come first; weight and abdominal perimeter come last and are optional.
 - Whether a patient is on GLP-1 is recorded by the professional, and it changes the plan as well as the feedback questions.
-- For GLP-1 patients, the professional records each dose with its date, so doses can be compared over time with weight and body-measurement results.
+- For GLP-1 patients, the professional records each dose with its date, so doses can be compared over time with weight and body-measurement results. The patient sees the recorded doses in the app; the app never advises on doses or symptoms.
+- Measurements are weight, waist (abdominal perimeter), hip, fat mass and muscle mass. The professional records them on the website and the patient can record them in the app; a patient's entry reaches the professional's reports "to confirm".
+- Each patient has a **private clinical record** (personal and clinical data from the first visit, plus notes from each visit). Only the professional sees it; it is never sent to the app.
+- Patient accounts are created only by the professional (email invite). The website login uses two-step verification. Notification texts never carry health data.
 - Weight, body measurements and medication are health data: the most sensitive kind of personal data (GDPR special category).
-- Built with **Kotlin Multiplatform** (Android and iOS). Where the professional side runs (desktop, web or the same app) is still open: decision ticket INU-2.
+- Built with **Kotlin Multiplatform** (Android and iOS). The professional side is a **website** (decided in INU-2). The website and the app share one server, which stores health data in Europe.
+
+## First version
+Decided by Inês Nascimento (INU-2 and INU-4 on 23 November 2026; scope closed on 24 November 2026, see [docs/decisoes.md](docs/decisoes.md)). Execution tasks: INU-5 to INU-22. Anything outside this list needs an owner's decision first.
+- **Professional website:** login with two-step verification; patient list, create patients and invite them to the app; one page per patient (summary and evolution, plan, documents, private clinical record); food database (INSA table, edits, foods added by hand, supermarkets per food); plan as a typical day in a spreadsheet with automatic totals, published to the app; record measurements and GLP-1 doses with dates and see evolution charts; upload support documents; reports page with weekly feedback, patient measurements (confirm or correct) and patient questions.
+- **Patient app (Android and iOS):** login and password recovery (account created by the professional); home; read the plan and support documents; weekly feedback (GLP-1 or non-GLP-1 questions) and the behaviours being kept; evolution with recorded doses, and recording weight and measurements; medication-day reminder; shopping guide by supermarket; barcode reader that says whether a product is in the guide and in which meal of the plan.
+- **Both:** consent and privacy screens before any real patient data.
+- **Later, not in the first version:** food diary with meal photos and AI calorie estimates; website team management (inviting other professionals or administrators); messages between professional and patient (the open question at the end of the weekly feedback covers this for now).
 
 ## Brand and tone
 Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still open.
