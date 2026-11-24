@@ -71,7 +71,8 @@ Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still o
 - Tasks live in Jira, project **INU**: https://olegarioncnascimento.atlassian.net/jira/software/projects/INU. No work without a task.
 - **Order of work:** [docs/plano-de-implementacao.md](docs/plano-de-implementacao.md), not ticket numbers. Before starting a task, check that every task in its **Depende de** is merged into `develop`; if not, say which one it waits for and suggest a task that is ready.
 - The board has four columns: **To do, In development, Testing, Done**. Move the task yourself: **In development** when you start, **Testing** when the pull request opens, **Done** when it merges. If Jira can't be reached from here, tell the person which column to move it to.
-- Every commit and pull request title starts with the task's reference: `INU-12: …`. A hook and a CI check enforce it. Setup work uses `INU-0`.
+- Every commit and pull request title starts with the task's reference: `INU-12: …`. A hook and a CI check enforce it.
+- Every change starts with its own task, docs, plans and mockups included. No task yet? Ask the person, or create it, before the branch. Work that spans several tasks gets a task of its own. `INU-0` was only for the setup, and the checks refuse it now.
 - Checks `test` and `ticket-key` must pass. AI review (CodeRabbit) is installed; on this repository it reviews only when asked (tick **Trigger review** on the PR, or comment `@coderabbitai review`). Commit and push its fixes straight away.
 
 ## Gitflow: you run it, the person never has to

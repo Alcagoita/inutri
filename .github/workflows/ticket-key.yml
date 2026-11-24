@@ -1,5 +1,6 @@
 # Installed by the framework setup. Every PR title and commit starts with a ticket key.
 # The pattern lives in .github/ticket-key-pattern (also read by the local commit-msg hook).
+# It is read from the base branch, so a PR that changes it is checked by the rule it replaces.
 name: ticket-key
 on:
   pull_request:
@@ -19,7 +20,8 @@ jobs:
           BASE: ${{ github.event.pull_request.base.sha }}
           HEAD: ${{ github.event.pull_request.head.sha }}
         run: |
-          PATTERN="$(head -1 .github/ticket-key-pattern)"
+          PATTERN="$(git show "$BASE:.github/ticket-key-pattern" 2>/dev/null | head -1)"
+          [ -n "$PATTERN" ] || PATTERN="$(head -1 .github/ticket-key-pattern)"
           bad=0
           if ! printf '%s' "$TITLE" | grep -Eq "$PATTERN"; then
             echo "::error::PR title must start with a ticket key, e.g. INU-12: add the invite link"
