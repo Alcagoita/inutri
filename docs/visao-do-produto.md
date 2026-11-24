@@ -55,7 +55,9 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 - **Feedback semanal com curiosidade, não julgamento:** três estados sem vermelho (*Correu bem*, *A construir*, *Ficou para a próxima*), os comportamentos mantidos antes do peso, e cada paciente comparado só consigo próprio.
 
 ## Tecnologia e forma de trabalhar
-- **Kotlin Multiplatform**, para Android e iPhone.
+- **App:** Kotlin Multiplatform, para Android e iPhone. Lê sem internet; pede Face ID ou impressão digital ao abrir.
+- **Website:** React + TypeScript.
+- **Servidor e base de dados:** Supabase na UE (Frankfurt), com um projeto de teste e outro de produção. Emails pela Brevo (UE); erros pelo Sentry (UE). Detalhe em [decisoes.md](decisoes.md), "arquitetura técnica".
 - **Código:** https://github.com/Alcagoita/inutri (público).
 - **Tarefas:** Jira, projeto **INU**, num quadro com quatro colunas: To do, In development, Testing, Done.
 - Cada mudança nasce de uma tarefa, vai num branch com o nome da tarefa (`INU-12-…`) e chega por pull request a `develop`. As verificações têm de passar, o outro dono aprova, e qualquer um dos dois decide quando entra.
@@ -63,4 +65,6 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 
 ## Em aberto
 - **Nome da app e da marca.** Ainda por decidir em brainstorming.
+- **Onde fica alojado o website** (de preferência na Europa).
+- **Confirmar** que a Supabase suporta passkeys e código por email como segundo passo do login da nutricionista.
 - **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide em brainstorming; cada mudança precisa da aprovação do outro. O quadro do Jira só tem tarefas de execução.
