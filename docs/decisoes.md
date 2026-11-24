@@ -4,6 +4,60 @@ As decisões são tomadas em brainstorming com o dono que está na sessão, e es
 
 As mais recentes ficam no topo.
 
+## 24 de novembro de 2026 — arquitetura técnica
+
+Brainstorming de arquitetura com o Olegário Nascimento. Desbloqueia a [INU-5](https://olegarioncnascimento.atlassian.net/browse/INU-5).
+
+### Servidor e base de dados
+- **Decisão:** **Supabase**, alojado na região da UE (Frankfurt): base de dados PostgreSQL, autenticação, armazenamento de ficheiros e regras de acesso por linha. Dois projetos separados: **teste** (só dados inventados) e **produção**.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** é o caminho com menos trabalho para uma equipa de duas pessoas: base de dados, login, ficheiros e permissões num só serviço, com os dados guardados na Europa. O PostgreSQL encaixa nos dados (pacientes → planos → refeições → alimentos, medições com data).
+- **Notas:** a Supabase é uma empresa americana; os dados ficam na região europeia. Assinar o acordo de tratamento de dados (DPA) da Supabase antes de entrarem dados reais. As regras partilhadas (somas do plano, perguntas do feedback) ficam na base de dados, para a app e o website calcularem igual. Cada paciente pertence a uma profissional nos dados desde o início, a pensar no gestor da equipa.
+
+### Website
+- **Decisão:** o website da nutricionista é feito em **React + TypeScript**. A app continua em Kotlin Multiplatform.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** ferramentas maduras para a folha do plano e para gráficos, biblioteca oficial da Supabase, e comporta-se como um site normal (copiar texto, zoom, leitores de ecrã).
+- **Em aberto:** onde fica alojado o website (de preferência na Europa). O website não guarda dados de saúde; vai buscá-los à Supabase.
+
+### Login da nutricionista (website)
+- **Decisão:** email e palavra-passe, e depois um segundo passo: **passkey** (impressão digital, Touch ID ou Windows Hello) e, em alternativa, um **código por email**. A sessão dura **7 dias** no mesmo computador; "Sair" termina-a logo.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** o website tem as fichas clínicas de todas as pacientes, por isso o segundo passo fica; a passkey é mais segura e mais rápida do que um código. Pedir login a cada 30 minutos (como dizia a INU-6) era impraticável.
+- **Para confirmar antes de construir:** que a Supabase Auth suporta passkeys e código por email como segundo passo. Se não suportar, usar o que suportar mais perto disto e voltar a decidir.
+
+### Login da paciente (app)
+- **Decisão:** login normal com email e palavra-passe. Não há registo na app: só a nutricionista cria contas. Quando cria a conta, a paciente recebe um email a dizer que tem uma conta à espera de palavra-passe, e define-a numa **página web simples**, que só serve para definir e recuperar a palavra-passe. Depois entra na app. A app fica com a sessão aberta e **pede Face ID, impressão digital ou o código do telemóvel** ao abrir.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** a paciente só entra, sem passos extra; o bloqueio ao abrir protege os dados de saúde se o telemóvel estiver desbloqueado noutras mãos.
+
+### Envio de emails
+- **Decisão:** **Brevo** (empresa francesa, dados na UE), ligado à Supabase para convites, recuperação de palavra-passe e códigos. Os emails nunca levam dados de saúde.
+- **Quem:** Olegário Nascimento.
+
+### Erros e falhas
+- **Decisão:** **Sentry, região da UE**, na app e no website, configurado para nunca enviar dados de saúde nem dados pessoais.
+- **Quem:** Olegário Nascimento.
+
+### App sem internet
+- **Decisão:** a app **lê sem internet**: o plano, o guia de compras e os documentos ficam guardados no telemóvel, cifrados, e são apagados ao sair da conta. Feedbacks e medições são enviados quando voltar a haver rede.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** o guia de compras usa-se no supermercado, onde a rede falha muitas vezes.
+
+### Lembretes
+- **Decisão:** o lembrete do dia da toma é **marcado no próprio telemóvel** a partir do dia definido no plano (sem notificações enviadas pelo servidor). Há também um **lembrete do feedback semanal**, no dia que a nutricionista define para cada paciente; nesse dia fecha a semana do feedback. Os textos das notificações nunca levam dados de saúde.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** funciona sem rede e sem passar dados pelos serviços de notificações da Google e da Apple.
+
+### Fim do plano
+- **Decisão:** quando o plano chega à data de fim, **deixa de aparecer na app**, que mostra "À espera do teu novo plano". Os planos antigos ficam guardados no website como histórico.
+- **Quem:** Olegário Nascimento.
+
+### Código de barras e alimentos
+- **Decisão:** um código de barras é um produto concreto e liga-se a um alimento da base de **duas formas**: a nutricionista liga no website os produtos mais comuns; quando a paciente lê um produto desconhecido, ele chega aos reports e a nutricionista liga-o uma vez, ficando a funcionar para todas as pacientes.
+- **Quem:** Olegário Nascimento.
+- **Porquê:** a base tem alimentos genéricos ("arroz agulha") e o código identifica uma marca e um tamanho; sem esta ligação o leitor não sabe a que refeição o produto pertence.
+
 ## 24 de novembro de 2026
 
 ### O que entra na primeira versão
