@@ -9,7 +9,7 @@ The project has **two owners with equal say on the product**: Olegário Nascimen
 - **Pull requests:** every pull request needs one approval from the owner who did not open it. After that approval, either owner can say merge.
 - **GitHub:** the repository belongs to Olegário's account, so only he is a GitHub admin (repository settings, merging without an approval). Inês has write access, which is enough to approve and to merge after approval.
 
-Both owners speak Portuguese (pt-PT): answer in the language they write in. Code, commits and pull requests are in English. The full product picture for the team is in [docs/visao-do-produto.md](docs/visao-do-produto.md).
+Both owners speak Portuguese (pt-PT): answer in the language they write in. Code, commits and pull requests are in English. The full product picture for the team is in [docs/visao-do-produto.md](docs/visao-do-produto.md). The reference screens for the first version are in [docs/mockup/](docs/mockup/README.md).
 
 ## What this product is
 A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional website**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.

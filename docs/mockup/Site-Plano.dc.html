@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Folha do plano</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #FBF6EE; font-family: Inter, system-ui, sans-serif; color: #2E2A26; font-size: 15px">
+
+<header style="background: #1F5135; color: #FBF6EE">
+<div style="max-width: 1440px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 10 A11 11 0 0 0 25 10 Z" fill="#DDEFC8"></path><path d="M3 10 A11 11 0 0 0 25 10" fill="none" stroke="#A8D13C" stroke-width="2.5"></path><circle cx="10" cy="14" r="1.3" fill="#2E2A26"></circle><circle cx="14" cy="17" r="1.3" fill="#2E2A26"></circle><circle cx="18" cy="14" r="1.3" fill="#2E2A26"></circle></svg>
+inutri
+</div>
+<nav aria-label="Principal" style="display: flex; gap: 4px; flex-wrap: wrap">
+<a href="Site-Pacientes.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px; background: rgba(251,246,238,0.14); font-weight: 600">Pacientes</a>
+<a href="Site-Alimentos.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Alimentos</a>
+<a href="#" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Documentos</a>
+<a href="Site-Reports.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Reports</a>
+<a href="Site-Utilizadores.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Utilizadores</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<div style="width: 34px; height: 34px; border-radius: 50%; background: #DDEFC8; color: #1F5135; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">IN</div>
+<span style="font-weight: 500">Inês Nascimento</span>
+</div>
+</div>
+</header>
+
+<div style="max-width: 1360px; margin: 0 auto; padding: 24px 32px 48px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box">
+
+<nav aria-label="Caminho" style="font-size: 14px; display: flex; gap: 8px"><a href="Site-Pacientes.dc.html" style="text-decoration: none; font-weight: 500">Pacientes</a><span aria-hidden="true" style="color: #5E574F">›</span><a href="Main.dc.html" style="text-decoration: none; font-weight: 500">Ana Martins</a></nav>
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-size: 28px; color: #1F5135; letter-spacing: -0.02em">Plano da Ana Martins</h1>
+<p style="margin: 0; color: #5E574F">Escolha os alimentos e as quantidades; os valores nutricionais somam-se sozinhos. A app nunca gera nem copia planos.</p>
+<p style="margin: 0; font-size: 13px">Versão 2 · publicada a 16 nov 2026 · alterações por publicar · <a href="#" style="font-weight: 600">Histórico de versões (2)</a></p>
+</div>
+<div style="margin-left: auto; display: flex; gap: 10px; flex-wrap: wrap">
+<button type="button" style="padding: 11px 16px; border-radius: 10px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-weight: 600; cursor: pointer">Guardar rascunho</button>
+<button type="button" style="padding: 11px 16px; border-radius: 10px; border: 0; background: #1F5135; color: #FBF6EE; font: inherit; font-weight: 600; cursor: pointer">Publicar na app</button>
+</div>
+</div>
+
+<nav aria-label="Página da Ana Martins" style="display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid #E8E1D4">
+<a href="Main.dc.html" style="padding: 12px 16px; text-decoration: none; color: #5E574F; border-bottom: 3px solid transparent; margin-bottom: -1px">Resumo e evolução</a>
+<a href="Site-Plano.dc.html" aria-current="page" style="padding: 12px 16px; text-decoration: none; font-weight: 600; color: #1F5135; border-bottom: 3px solid #1F5135; margin-bottom: -1px">Plano</a>
+<a href="Main.dc.html" style="padding: 12px 16px; text-decoration: none; color: #5E574F; border-bottom: 3px solid transparent; margin-bottom: -1px">Documentos</a>
+<a href="Site-Ficha.dc.html" style="padding: 12px 16px; text-decoration: none; color: #5E574F; border-bottom: 3px solid transparent; margin-bottom: -1px">Ficha clínica (privada)</a>
+</nav>
+
+<section aria-labelledby="per" style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 18px 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; align-items: end">
+<h2 id="per" style="grid-column: 1 / -1; margin: 0; font-size: 17px; color: #1F5135">Período, terapêutica e lembretes</h2>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="ini" style="font-size: 13px; color: #5E574F">Início</label>
+<input id="ini" type="text" value="1 set 2026" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="fim" style="font-size: 13px; color: #5E574F">Fim</label>
+<input id="fim" type="text" value="15 dez 2026" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit">
+</div>
+<label style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; cursor: pointer">
+<input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #1F5135">
+<span>Paciente com GLP-1</span>
+</label>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="dia" style="font-size: 13px; color: #5E574F">Dia da toma (lembrete na app)</label>
+<input id="dia" type="text" value="Segunda-feira" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="dfb" style="font-size: 13px; color: #5E574F">Dia do feedback semanal (fecha a semana)</label>
+<input id="dfb" type="text" value="Domingo" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit">
+</div>
+<p style="grid-column: 1 / -1; margin: 0; font-size: 13px; color: #5E574F">Um plano novo começa depois do fim deste. Depois da data de fim, a app mostra «À espera do teu novo plano».</p>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px">
+<sc-for list="{{ totals }}" as="t" hint-placeholder-count="4">
+<div style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 14px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; color: #5E574F">{{ t.label }} · total do dia</span>
+<span style="font-size: 24px; font-weight: 700; color: #1F5135">{{ t.value }}</span>
+<span style="font-size: 13px">{{ t.extra }}</span>
+</div>
+</sc-for>
+</div>
+
+<section aria-labelledby="folha" style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 18px 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<h2 id="folha" style="margin: 0; font-size: 17px; color: #1F5135">Folha do plano · dia tipo</h2>
+<span style="font-size: 13px; color: #5E574F">Valores da base de alimentos, por quantidade</span>
+<button type="button" style="margin-left: auto; padding: 8px 12px; border-radius: 8px; border: 1px solid #D9D2C5; background: #FFFFFF; font: inherit; font-size: 14px; cursor: pointer">+ Refeição</button>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 760px; font-variant-numeric: tabular-nums">
+<thead>
+<tr style="text-align: right; color: #5E574F; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em">
+<th scope="col" style="text-align: left; padding: 8px 10px; font-weight: 600">Alimento</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600; width: 120px">Quantidade (g)</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Energia (kcal)</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Proteína (g)</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Hidratos (g)</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Gordura (g)</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Fibra (g)</th>
+</tr>
+</thead>
+<sc-for list="{{ meals }}" as="m" hint-placeholder-count="4">
+<tbody>
+<tr><th scope="rowgroup" colspan="7" style="text-align: left; padding: 16px 10px 6px; font-size: 15px; color: #1F5135; border-bottom: 2px solid #1F5135">{{ m.name }}</th></tr>
+<sc-for list="{{ m.rows }}" as="r" hint-placeholder-count="3">
+<tr style="border-bottom: 1px solid #EFE9DE; text-align: right">
+<td style="text-align: left; padding: 6px 10px">{{ r.name }}</td>
+<td style="padding: 4px 10px"><input type="number" min="0" step="5" aria-label="{{ r.aria }}" value="{{ r.qty }}" onChange="{{ r.onQty }}" style="width: 84px; padding: 6px 8px; border: 1px solid #D9D2C5; border-radius: 8px; font: inherit; text-align: right; background: #FFFDF8"></td>
+<td style="padding: 6px 10px">{{ r.k }}</td>
+<td style="padding: 6px 10px">{{ r.p }}</td>
+<td style="padding: 6px 10px">{{ r.c }}</td>
+<td style="padding: 6px 10px">{{ r.g }}</td>
+<td style="padding: 6px 10px">{{ r.f }}</td>
+</tr>
+</sc-for>
+<tr style="text-align: right; background: #FBF6EE; font-weight: 600">
+<td style="text-align: left; padding: 8px 10px"><label style="display: flex; align-items: center; gap: 8px; font-weight: 400; color: #5E574F"><span style="white-space: nowrap">+ Alimento</span><input type="search" placeholder="Procurar na base" style="padding: 6px 8px; border: 1px solid #D9D2C5; border-radius: 8px; font: inherit; width: 160px; background: #FFFFFF"></label></td>
+<td style="padding: 8px 10px; color: #5E574F; font-weight: 500">Subtotal</td>
+<td style="padding: 8px 10px">{{ m.k }}</td>
+<td style="padding: 8px 10px">{{ m.p }}</td>
+<td style="padding: 8px 10px">{{ m.c }}</td>
+<td style="padding: 8px 10px">{{ m.g }}</td>
+<td style="padding: 8px 10px">{{ m.f }}</td>
+</tr>
+</tbody>
+</sc-for>
+<tfoot>
+<tr style="text-align: right; background: #DDEFC8; font-weight: 700; color: #1F5135">
+<td style="text-align: left; padding: 12px 10px" colspan="2">Total do dia</td>
+<td style="padding: 12px 10px">{{ day.k }}</td>
+<td style="padding: 12px 10px">{{ day.p }}</td>
+<td style="padding: 12px 10px">{{ day.c }}</td>
+<td style="padding: 12px 10px">{{ day.g }}</td>
+<td style="padding: 12px 10px">{{ day.f }}</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</section>
+
+<section aria-labelledby="not" style="background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 18px 22px; display: flex; flex-direction: column; gap: 10px">
+<h2 id="not" style="margin: 0; font-size: 17px; color: #1F5135">Nota para a Ana</h2>
+<label for="nota" style="font-size: 13px; color: #5E574F">Aparece no topo do plano, na app</label>
+<textarea id="nota" rows="2" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit; resize: vertical">Este mês o foco é a água e a caminhada. Não precisa de ser perfeito: um passo de cada vez.</textarea>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { qty: {} };
+  }
+  renderVals() {
+    var F = {
+      iog: { n: 'Iogurte natural', k: 63, p: 4, c: 5, g: 3, f: 0 },
+      ave: { n: 'Flocos de aveia', k: 370, p: 13, c: 60, g: 7, f: 10 },
+      frv: { n: 'Frutos vermelhos', k: 50, p: 1, c: 10, g: 0.3, f: 4 },
+      fra: { n: 'Peito de frango grelhado', k: 165, p: 31, c: 0, g: 3.6, f: 0 },
+      arr: { n: 'Arroz integral cozido', k: 123, p: 2.7, c: 26, g: 1, f: 1.6 },
+      bro: { n: 'Brócolos cozidos', k: 35, p: 2.4, c: 4, g: 0.4, f: 3.3 },
+      aze: { n: 'Azeite', k: 884, p: 0, c: 0, g: 100, f: 0 },
+      mac: { n: 'Maçã', k: 52, p: 0.3, c: 14, g: 0.2, f: 2.4 },
+      ame: { n: 'Amêndoas', k: 579, p: 21, c: 22, g: 50, f: 12 },
+      pes: { n: 'Pescada cozida', k: 90, p: 19, c: 0, g: 1.3, f: 0 },
+      bat: { n: 'Batata cozida', k: 87, p: 1.9, c: 20, g: 0.1, f: 1.8 }
+    };
+    var plan = [
+      { name: 'Pequeno-almoço', items: [['iog', 125], ['ave', 30], ['frv', 80]] },
+      { name: 'Almoço', items: [['fra', 120], ['arr', 100], ['bro', 150], ['aze', 10]] },
+      { name: 'Lanche', items: [['mac', 150], ['ame', 15]] },
+      { name: 'Jantar', items: [['pes', 130], ['bat', 120], ['bro', 150], ['aze', 10]] }
+    ];
+    var self = this;
+    function fmt(x, d) { return x.toFixed(d).replace('.', ','); }
+    var day = { k: 0, p: 0, c: 0, g: 0, f: 0 };
+    var meals = plan.map(function (m, mi) {
+      var sub = { k: 0, p: 0, c: 0, g: 0, f: 0 };
+      var rows = m.items.map(function (it, ri) {
+        var key = mi + '-' + ri;
+        var q = self.state.qty[key];
+        if (q === undefined) q = it[1];
+        var food = F[it[0]];
+        var v = {};
+        ['k', 'p', 'c', 'g', 'f'].forEach(function (n) { v[n] = food[n] * (Number(q) || 0) / 100; sub[n] += v[n]; });
+        return {
+          name: food.n,
+          aria: 'Quantidade de ' + food.n + ' em gramas',
+          qty: q,
+          k: fmt(v.k, 0), p: fmt(v.p, 1), c: fmt(v.c, 1), g: fmt(v.g, 1), f: fmt(v.f, 1),
+          onQty: function (e) {
+            var next = Object.assign({}, self.state.qty);
+            next[key] = e.target.value;
+            self.setState({ qty: next });
+          }
+        };
+      });
+      ['k', 'p', 'c', 'g', 'f'].forEach(function (n) { day[n] += sub[n]; });
+      return { name: m.name, rows: rows, k: fmt(sub.k, 0), p: fmt(sub.p, 1), c: fmt(sub.c, 1), g: fmt(sub.g, 1), f: fmt(sub.f, 1) };
+    });
+    var kcal = day.k || 1;
+    function pct(g, factor) { return Math.round(g * factor / kcal * 100) + '% da energia'; }
+    return {
+      meals: meals,
+      day: { k: fmt(day.k, 0), p: fmt(day.p, 1), c: fmt(day.c, 1), g: fmt(day.g, 1), f: fmt(day.f, 1) },
+      totals: [
+        { label: 'Energia', value: fmt(day.k, 0) + ' kcal', extra: '4 refeições' },
+        { label: 'Proteína', value: fmt(day.p, 0) + ' g', extra: pct(day.p, 4) },
+        { label: 'Hidratos', value: fmt(day.c, 0) + ' g', extra: pct(day.c, 4) },
+        { label: 'Gordura', value: fmt(day.g, 0) + ' g', extra: pct(day.g, 9) }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

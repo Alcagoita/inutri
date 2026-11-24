@@ -1,0 +1,233 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-23T10:00:00Z"
+  },
+  "title": "inutri — mockup website e app",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1420,
+      "title": "Website · Resumo da paciente",
+      "expand": "fill"
+    },
+    "Site-Plano.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 1800,
+      "title": "Website · Folha do plano",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    "Site-Alimentos.dc.html": {
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 1420,
+      "title": "Website · Base de alimentos",
+      "expand": "fill"
+    },
+    "Site-Ficha.dc.html": {
+      "x": 4560,
+      "y": 0,
+      "w": 1440,
+      "h": 1500,
+      "title": "Website · Ficha clínica (privada)",
+      "expand": "fill"
+    },
+    "App-Login.dc.html": {
+      "x": 0,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Entrar"
+    },
+    "App-Inicio.dc.html": {
+      "x": 940,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Início"
+    },
+    "App-Plano.dc.html": {
+      "x": 1410,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Plano"
+    },
+    "App-Feedback.dc.html": {
+      "x": 1880,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Feedback semanal",
+      "is_interactive": true
+    },
+    "App-Semana.dc.html": {
+      "x": 2350,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · O que estás a manter"
+    },
+    "App-Evolucao.dc.html": {
+      "x": 2820,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Evolução"
+    },
+    "App-Registar.dc.html": {
+      "x": 3290,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Registar medição"
+    },
+    "App-Diario.dc.html": {
+      "x": 0,
+      "y": 5400,
+      "w": 390,
+      "h": 844,
+      "title": "App · Diário alimentar (fase seguinte)"
+    },
+    "App-Compras.dc.html": {
+      "x": 3760,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Guia de compras",
+      "is_interactive": true
+    },
+    "App-Scanner.dc.html": {
+      "x": 4230,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Código de barras"
+    },
+    "App-Documentos.dc.html": {
+      "x": 4700,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Documentos"
+    },
+    "Site-Login.dc.html": {
+      "x": 0,
+      "y": 3700,
+      "w": 1440,
+      "h": 900,
+      "title": "Website · Entrar",
+      "expand": "fill"
+    },
+    "Site-Pacientes.dc.html": {
+      "x": 1520,
+      "y": 3700,
+      "w": 1440,
+      "h": 1000,
+      "title": "Website · Pacientes",
+      "expand": "fill"
+    },
+    "Site-Utilizadores.dc.html": {
+      "x": 3040,
+      "y": 3700,
+      "w": 1440,
+      "h": 1100,
+      "title": "Website · Gestor de utilizadores",
+      "expand": "fill"
+    },
+    "Site-Reports.dc.html": {
+      "x": 4560,
+      "y": 3700,
+      "w": 1440,
+      "h": 1200,
+      "title": "Website · Reports da app",
+      "expand": "fill"
+    },
+    "App-Consentimento.dc.html": {
+      "x": 470,
+      "y": 2300,
+      "w": 390,
+      "h": 844,
+      "title": "App · Consentimento (primeiro acesso)",
+      "is_interactive": true
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Site-Plano.dc.html",
+    "Site-Alimentos.dc.html",
+    "Site-Ficha.dc.html",
+    "App-Login.dc.html",
+    "App-Consentimento.dc.html",
+    "App-Inicio.dc.html",
+    "App-Plano.dc.html",
+    "App-Feedback.dc.html",
+    "App-Semana.dc.html",
+    "App-Evolucao.dc.html",
+    "App-Registar.dc.html",
+    "App-Compras.dc.html",
+    "App-Scanner.dc.html",
+    "App-Documentos.dc.html",
+    "Site-Login.dc.html",
+    "Site-Pacientes.dc.html",
+    "Site-Utilizadores.dc.html",
+    "Site-Reports.dc.html",
+    "App-Diario.dc.html"
+  ],
+  "notes": {
+    "titleSite": {
+      "x": 0,
+      "y": -300,
+      "text": "Website da nutricionista (sóbrio e claro)",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "titleApp": {
+      "x": 0,
+      "y": 2000,
+      "text": "App da paciente (calorosa e encorajadora)",
+      "kind": "title1",
+      "maxW": 5090
+    },
+    "titleAcesso": {
+      "x": 0,
+      "y": 3400,
+      "text": "Website: entrar, pacientes, utilizadores e reports",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "noteData": {
+      "x": 5170,
+      "y": 2300,
+      "w": 360,
+      "text": "Dados inventados: «Ana Martins» e todos os valores são fictícios. O nome «inutri» é provisório até à decisão do nome.",
+      "fill": "green"
+    },
+    "titleLater": {
+      "x": 0,
+      "y": 5100,
+      "text": "Fase seguinte: fora da primeira versão",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "noteLater": {
+      "x": 470,
+      "y": 5400,
+      "w": 420,
+      "text": "Fica para depois (decidido a 24/11/2026): diário alimentar com fotos e kcal estimadas por IA, e convidar outras nutricionistas ou administradoras no website. O ecrã fica aqui só como referência.",
+      "fill": "green"
+    }
+  },
+  "designSystems": []
+}

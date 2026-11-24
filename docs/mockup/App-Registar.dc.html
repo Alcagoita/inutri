@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>App · Registar medição</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF6EE; font-family: Nunito, system-ui, sans-serif; color: #2E2A26; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="flex: 1; overflow: hidden; padding: 20px 20px 12px; display: flex; flex-direction: column; gap: 14px">
+<a href="App-Evolucao.dc.html" style="font-weight: 700; font-size: 15px; text-decoration: none; padding: 8px 0">‹ Evolução</a>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-size: 26px; font-weight: 800; color: #1F5135">Registar medição</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.4">Preenche só o que mediste. A Inês recebe os valores.</p>
+</div>
+
+<form style="background: #FFFFFF; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="dt" style="font-weight: 700; font-size: 15px">Data</label>
+<input id="dt" type="text" value="Hoje, 23 de novembro" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 16px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="pe" style="font-weight: 700; font-size: 15px">Peso (kg)</label>
+<input id="pe" type="text" inputmode="decimal" value="86,0" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 16px">
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="ci" style="font-weight: 700; font-size: 15px">Cintura (cm)</label>
+<input id="ci" type="text" inputmode="decimal" value="94" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 16px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="an" style="font-weight: 700; font-size: 15px">Anca (cm)</label>
+<input id="an" type="text" inputmode="decimal" placeholder="—" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 16px">
+</div>
+</div>
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+<legend style="padding: 0; font-weight: 700; font-size: 15px; margin-bottom: 6px">Massa gorda e massa muscular</legend>
+<div role="group" aria-label="Unidade" style="display: flex; gap: 6px">
+<button type="button" aria-pressed="true" style="min-height: 36px; padding: 4px 14px; border-radius: 99px; font: inherit; font-size: 14px; font-weight: 700; background: #1F5135; color: #FBF6EE; border: 2px solid #1F5135">kg</button>
+<button type="button" aria-pressed="false" style="min-height: 36px; padding: 4px 14px; border-radius: 99px; font: inherit; font-size: 14px; font-weight: 700; background: #FFFFFF; color: #2E2A26; border: 1px solid #D9D2C5">%</button>
+<span style="align-self: center; font-size: 13px; color: #5E574F">como aparece na tua balança</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<input aria-label="Massa gorda (kg)" type="text" inputmode="decimal" placeholder="Gorda —" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 16px">
+<input aria-label="Massa muscular (kg)" type="text" inputmode="decimal" placeholder="Muscular —" style="padding: 12px 14px; border: 1px solid #D9D2C5; border-radius: 14px; font: inherit; font-size: 16px">
+</div>
+</fieldset>
+<a href="App-Documentos.dc.html" style="font-weight: 700; font-size: 14px">Como medir a cintura e a anca</a>
+</form>
+
+<a href="App-Evolucao.dc.html" style="display: block; text-align: center; padding: 15px; border-radius: 99px; background: #1F5135; color: #FBF6EE; font-weight: 800; font-size: 16px; text-decoration: none">Enviar à Inês</a>
+<p style="margin: 0; font-size: 13px; color: #5E574F; text-align: center; line-height: 1.4">Aparece no teu gráfico logo a seguir. A Inês confirma os valores.</p>
+</div>
+
+<nav aria-label="Separadores" style="background: #FFFFFF; border-top: 1px solid #EFE9DE; padding: 8px 4px 22px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))">
+<a href="App-Inicio.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4z"></path></svg>Início</a>
+<a href="App-Plano.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"></path><path d="M9 9h6M9 13h6"></path></svg>Plano</a>
+<a href="App-Compras.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h11L21 8H7"></path><circle cx="9" cy="19.5" r="1.5"></circle><circle cx="17" cy="19.5" r="1.5"></circle></svg>Compras</a>
+<a href="App-Evolucao.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #1F5135; font-size: 11px; font-weight: 800"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18 10 12l4 3 6-8"></path></svg>Evolução</a>
+<a href="App-Documentos.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path></svg>Documentos</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
