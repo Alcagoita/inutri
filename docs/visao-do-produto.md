@@ -43,7 +43,7 @@ Uma mudança que quebre uma promessa precisa primeiro de uma decisão de um dos 
 - Enviar dados de saúde para serviços fora da Europa.
 
 ## Primeira versão
-Decidida pela Inês (INU-2, INU-4 e brainstorming de 24/11/2026, ver [decisoes.md](decisoes.md)). Tarefas de execução: INU-5 a INU-22. O website e a app ligam-se por um servidor comum, que guarda os dados de saúde na Europa.
+Decidida pela Inês (INU-2, INU-4 e brainstorming de 24/11/2026, ver [decisoes.md](decisoes.md)). Tarefas de execução: INU-5 a INU-28. O website e a app ligam-se por um servidor comum, que guarda os dados de saúde na Europa.
 - **Website:** login com verificação em dois passos; lista de pacientes e convite para a app; página de cada paciente (resumo e evolução, plano, documentos, ficha clínica privada); base de alimentos (tabela INSA, edição, alimentos à mão, supermercados); plano como dia tipo em folha de cálculo; medições (peso, cintura, anca, massa gorda, massa muscular) e doses de GLP-1 com gráficos; documentos de apoio; reports com os feedbacks, as medições das pacientes e as perguntas.
 - **App da paciente:** login e recuperação da palavra-passe; plano e documentos (só leitura); feedback semanal e o que está a manter; evolução com as doses e registo de medições; lembrete no dia da toma; guia de compras por supermercado; leitor de código de barras.
 - **Nos dois:** consentimento e privacidade antes de entrarem dados reais.
