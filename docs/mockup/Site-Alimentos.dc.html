@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>Base de alimentos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #FBF6EE; font-family: Inter, system-ui, sans-serif; color: #2E2A26; font-size: 15px">
+
+<header style="background: #1F5135; color: #FBF6EE">
+<div style="max-width: 1440px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px">
+<div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px">
+<svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 10 A11 11 0 0 0 25 10 Z" fill="#DDEFC8"></path><path d="M3 10 A11 11 0 0 0 25 10" fill="none" stroke="#A8D13C" stroke-width="2.5"></path><circle cx="10" cy="14" r="1.3" fill="#2E2A26"></circle><circle cx="14" cy="17" r="1.3" fill="#2E2A26"></circle><circle cx="18" cy="14" r="1.3" fill="#2E2A26"></circle></svg>
+inutri
+</div>
+<nav aria-label="Principal" style="display: flex; gap: 4px; flex-wrap: wrap">
+<a href="Site-Pacientes.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Pacientes</a>
+<a href="Site-Alimentos.dc.html" aria-current="page" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px; background: rgba(251,246,238,0.14); font-weight: 600">Alimentos</a>
+<a href="#" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Documentos</a>
+<a href="Site-Reports.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Reports</a>
+<a href="Site-Utilizadores.dc.html" style="color: #FBF6EE; text-decoration: none; padding: 8px 14px; border-radius: 8px">Utilizadores</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<div style="width: 34px; height: 34px; border-radius: 50%; background: #DDEFC8; color: #1F5135; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">IN</div>
+<span style="font-weight: 500">Inês Nascimento</span>
+</div>
+</div>
+</header>
+
+<div style="max-width: 1440px; margin: 0 auto; padding: 28px 32px 48px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-size: 28px; color: #1F5135; letter-spacing: -0.02em">Base de alimentos</h1>
+<p style="margin: 0; color: #5E574F">Valores por 100 g. Usada em todas as folhas de plano.</p>
+</div>
+<button type="button" style="margin-left: auto; padding: 11px 16px; border-radius: 10px; border: 0; background: #1F5135; color: #FBF6EE; font: inherit; font-weight: 600; cursor: pointer">+ Adicionar alimento à mão</button>
+</div>
+
+<div role="note" style="background: #FFFFFF; border: 1px solid #F2C26B; border-radius: 14px; padding: 14px 18px; display: flex; gap: 12px; align-items: flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex: none; margin-top: 1px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16.5v.5"></path></svg>
+<p style="margin: 0; line-height: 1.5">A base parte da <strong>Tabela da Composição de Alimentos do INSA</strong> (Instituto Ricardo Jorge). Pode editar qualquer alimento e adicionar os seus à mão. Cada alimento tem uma secção (fruta, legumes, laticínios…), usada para arrumar o guia de compras. Os supermercados que marcar em cada alimento definem o guia de compras das pacientes.</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start">
+
+<section aria-labelledby="lista" style="flex: 999 1 640px; min-width: 0; background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 18px 22px; display: flex; flex-direction: column; gap: 14px">
+<h2 id="lista" style="margin: 0; font-size: 17px; color: #1F5135">Alimentos (11)</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<label for="proc" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Procurar alimento</label>
+<input id="proc" type="search" placeholder="Procurar alimento" style="flex: 1 1 220px; padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit">
+<div role="group" aria-label="Filtrar por origem" style="display: flex; gap: 6px; flex-wrap: wrap">
+<button type="button" aria-pressed="true" style="padding: 8px 12px; border-radius: 99px; border: 0; background: #1F5135; color: #FBF6EE; font: inherit; font-size: 13px; font-weight: 600">Todos</button>
+<button type="button" aria-pressed="false" style="padding: 8px 12px; border-radius: 99px; border: 1px solid #D9D2C5; background: #FFFFFF; font: inherit; font-size: 13px">Tabela INSA</button>
+<button type="button" aria-pressed="false" style="padding: 8px 12px; border-radius: 99px; border: 1px solid #D9D2C5; background: #FFFFFF; font: inherit; font-size: 13px">Editados por si</button>
+<button type="button" aria-pressed="false" style="padding: 8px 12px; border-radius: 99px; border: 1px solid #D9D2C5; background: #FFFFFF; font: inherit; font-size: 13px">Adicionados à mão</button>
+</div>
+<label for="sec" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Secção</label>
+<select id="sec" style="padding: 8px 12px; border: 1px solid #D9D2C5; border-radius: 99px; font: inherit; font-size: 13px; background: #FFFFFF"><option>Todas as secções</option><option>Fruta</option><option>Legumes</option><option>Cereais</option><option>Laticínios</option><option>Carne, peixe e ovos</option><option>Leguminosas</option><option>Gorduras</option><option>Bebidas</option><option>Outros</option></select>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 920px; font-variant-numeric: tabular-nums">
+<thead>
+<tr style="text-align: right; color: #5E574F; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em">
+<th scope="col" style="text-align: left; padding: 8px 10px; font-weight: 600">Alimento</th>
+<th scope="col" style="text-align: left; padding: 8px 10px; font-weight: 600">Secção</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">kcal</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Proteína</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Hidratos</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Gordura</th>
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Fibra</th>
+<th scope="col" style="text-align: left; padding: 8px 10px; font-weight: 600">Onde encontro</th>
+<th scope="col" style="text-align: left; padding: 8px 10px; font-weight: 600">Origem</th>
+<th scope="col" style="padding: 8px 10px"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Ações</span></th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{ foods }}" as="f" hint-placeholder-count="11">
+<tr style="border-top: 1px solid #EFE9DE; text-align: right">
+<td style="text-align: left; padding: 10px; font-weight: 500">{{ f.n }}</td>
+<td style="text-align: left; padding: 10px; font-size: 13px">{{ f.sec }}</td>
+<td style="padding: 10px">{{ f.k }}</td>
+<td style="padding: 10px">{{ f.p }}</td>
+<td style="padding: 10px">{{ f.c }}</td>
+<td style="padding: 10px">{{ f.g }}</td>
+<td style="padding: 10px">{{ f.f }}</td>
+<td style="text-align: left; padding: 10px; font-size: 13px; max-width: 220px">{{ f.where }}</td>
+<td style="text-align: left; padding: 10px"><span style="{{ f.chip }}">{{ f.src }}</span></td>
+<td style="padding: 6px 10px"><button type="button" aria-label="{{ f.editLabel }}" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #D9D2C5; background: #FFFFFF; font: inherit; font-size: 13px; cursor: pointer">Editar</button></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</section>
+
+<section aria-labelledby="novo" style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 18px 22px; display: flex; flex-direction: column; gap: 12px">
+<h2 id="novo" style="margin: 0; font-size: 17px; color: #1F5135">Adicionar alimento à mão</h2>
+<p style="margin: 0; font-size: 14px; color: #5E574F; line-height: 1.5">Escreva os valores por 100 g, por exemplo do rótulo. Se quiser, pode partir de um alimento da tabela INSA.</p>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="nn" style="font-size: 13px; color: #5E574F">Nome</label>
+<input id="nn" type="text" value="Pão de espelta da padaria do bairro" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit">
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<button type="button" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Partir da tabela INSA</button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="ns" style="font-size: 13px; color: #5E574F">Secção</label>
+<select id="ns" style="padding: 10px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit; background: #FFFFFF"><option selected>Cereais</option><option>Fruta</option><option>Legumes</option><option>Laticínios</option><option>Carne, peixe e ovos</option><option>Leguminosas</option><option>Gorduras</option><option>Bebidas</option><option>Outros</option></select>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nk" style="font-size: 13px; color: #5E574F">Energia (kcal)</label><input id="nk" type="text" value="245" style="padding: 9px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="np" style="font-size: 13px; color: #5E574F">Proteína (g)</label><input id="np" type="text" value="10" style="padding: 9px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nc" style="font-size: 13px; color: #5E574F">Hidratos (g)</label><input id="nc" type="text" value="44" style="padding: 9px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="ng" style="font-size: 13px; color: #5E574F">Gordura (g)</label><input id="ng" type="text" value="2,5" style="padding: 9px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nf" style="font-size: 13px; color: #5E574F">Fibra (g)</label><input id="nf" type="text" value="6" style="padding: 9px 12px; border: 1px solid #D9D2C5; border-radius: 10px; font: inherit"></div>
+</div>
+<fieldset style="border: 1px solid #E8E1D4; border-radius: 12px; padding: 10px 14px 12px; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<legend style="padding: 0 6px; font-size: 13px; font-weight: 600; color: #1F5135">Onde se encontra (aparece no guia de compras da app)</legend>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #1F5135">Continente</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #1F5135">Pingo Doce</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #1F5135">Lidl</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #1F5135">Aldi</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #1F5135">Mercadona</label>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #1F5135">Intermarché</label>
+</fieldset>
+<button type="button" style="padding: 11px 16px; border-radius: 10px; border: 0; background: #1F5135; color: #FBF6EE; font: inherit; font-weight: 600; cursor: pointer">Guardar alimento</button>
+</section>
+<section aria-labelledby="cod" style="flex: 1 1 100%; min-width: 0; background: #FFFFFF; border: 1px solid #E8E1D4; border-radius: 16px; padding: 18px 22px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<h2 id="cod" style="margin: 0; font-size: 17px; color: #1F5135">Códigos de barras ligados</h2>
+<span style="font-size: 13px; color: #5E574F">Cada produto liga-se a um alimento desta base e passa a funcionar no leitor de todas as pacientes</span>
+<button type="button" style="margin-left: auto; padding: 8px 12px; border-radius: 8px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">+ Ligar produto</button>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px">
+<thead><tr style="text-align: left; color: #5E574F; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em"><th scope="col" style="padding: 8px 10px; font-weight: 600">Código</th><th scope="col" style="padding: 8px 10px; font-weight: 600">Produto</th><th scope="col" style="padding: 8px 10px; font-weight: 600">Alimento da base</th><th scope="col" style="padding: 8px 10px; font-weight: 600">Estado</th></tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #EFE9DE"><td style="padding: 10px; font-variant-numeric: tabular-nums">5600000000017</td><td style="padding: 10px">Iogurte natural 125 g (exemplo)</td><td style="padding: 10px">Iogurte natural</td><td style="padding: 10px"><span style="font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: #DDEFC8">Ligado</span></td></tr>
+<tr style="border-top: 1px solid #EFE9DE"><td style="padding: 10px; font-variant-numeric: tabular-nums">5600000000024</td><td style="padding: 10px">Flocos de aveia 500 g (exemplo)</td><td style="padding: 10px">Flocos de aveia</td><td style="padding: 10px"><span style="font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: #DDEFC8">Ligado</span></td></tr>
+<tr style="border-top: 1px solid #EFE9DE; background: #FBF6EE"><td style="padding: 10px; font-variant-numeric: tabular-nums">5600000000031</td><td style="padding: 10px">Lido pela Ana na app</td><td style="padding: 10px"><button type="button" style="padding: 6px 12px; border-radius: 8px; border: 1px solid #1F5135; background: #FFFFFF; color: #1F5135; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Escolher alimento</button></td><td style="padding: 10px"><span style="font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 99px; background: #F2C26B">Por ligar</span></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var S = {
+      insa: { t: 'Tabela INSA', bg: '#FFFFFF; border: 1px solid #1F5135' },
+      rev: { t: 'Editado por si', bg: '#DDEFC8' },
+      meu: { t: 'Adicionado à mão', bg: '#FCE3DD' }
+    };
+    var rows = [
+      ['Amêndoas', 579, 21, 22, 50, 12, 'insa', 'Todos'],
+      ['Arroz integral cozido', 123, 2.7, 26, 1, 1.6, 'insa', 'Todos'],
+      ['Azeite', 884, 0, 0, 100, 0, 'insa', 'Todos'],
+      ['Batata cozida', 87, 1.9, 20, 0.1, 1.8, 'insa', 'Todos'],
+      ['Brócolos cozidos', 35, 2.4, 4, 0.4, 3.3, 'rev', 'Todos'],
+      ['Flocos de aveia', 370, 13, 60, 7, 10, 'insa', 'Continente, Pingo Doce, Lidl, Mercadona'],
+      ['Frutos vermelhos', 50, 1, 10, 0.3, 4, 'meu', 'Continente, Pingo Doce, Lidl'],
+      ['Iogurte natural', 63, 4, 5, 3, 0, 'rev', 'Todos'],
+      ['Maçã', 52, 0.3, 14, 0.2, 2.4, 'insa', 'Todos'],
+      ['Peito de frango grelhado', 165, 31, 0, 3.6, 0, 'insa', 'Continente, Pingo Doce, Mercadona, Intermarché'],
+      ['Pescada cozida', 90, 19, 0, 1.3, 0, 'meu', 'Continente, Pingo Doce, Intermarché']
+    ];
+    var SEC = {"Amêndoas": "Gorduras", "Arroz integral cozido": "Cereais", "Azeite": "Gorduras", "Batata cozida": "Legumes", "Brócolos cozidos": "Legumes", "Flocos de aveia": "Cereais", "Frutos vermelhos": "Fruta", "Iogurte natural": "Laticínios", "Maçã": "Fruta", "Peito de frango grelhado": "Carne, peixe e ovos", "Pescada cozida": "Carne, peixe e ovos"};
+    function fmt(x) { return String(x).replace('.', ','); }
+    return {
+      foods: rows.map(function (r) {
+        var s = S[r[6]];
+        return {
+          n: r[0], sec: SEC[r[0]], k: fmt(r[1]), p: fmt(r[2]), c: fmt(r[3]), g: fmt(r[4]), f: fmt(r[5]),
+          src: s.t,
+          chip: 'font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 99px; white-space: nowrap; color: #2E2A26; background: ' + s.bg + ';',
+          editLabel: 'Editar ' + r[0],
+          where: r[7]
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

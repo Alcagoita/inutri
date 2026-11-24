@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>App · Início</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5135}a:hover{color:#2E2A26}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #FBF6EE; font-family: Nunito, system-ui, sans-serif; color: #2E2A26; display: flex; flex-direction: column; overflow: hidden">
+
+<div style="flex: 1; overflow: hidden; padding: 28px 20px 16px; display: flex; flex-direction: column; gap: 14px">
+
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; color: #5E574F">Segunda, 23 de novembro</span>
+<h1 style="margin: 0; font-size: 28px; font-weight: 800; color: #1F5135">Olá, Ana</h1>
+</div>
+
+<section aria-label="Lembrete" style="background: #DDEFC8; border-radius: 20px; padding: 14px 16px; display: flex; gap: 14px; align-items: center">
+<div style="width: 44px; height: 44px; flex: none; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M8 3v4M16 3v4M4 10h16"></path><circle cx="12" cy="15" r="1.6" fill="#A8D13C" stroke="none"></circle></svg>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 16px; color: #1F5135">Hoje é o dia da tua medicação</strong>
+<span style="font-size: 14px; line-height: 1.4">Dose registada pela Inês: <strong>5 mg</strong></span>
+</div>
+</section>
+
+<a href="App-Feedback.dc.html" style="background: #FFFFFF; border-radius: 20px; padding: 16px; text-decoration: none; color: #2E2A26; display: flex; align-items: center; gap: 14px; border: 2px solid #1F5135">
+<div style="width: 44px; height: 44px; flex: none; border-radius: 14px; background: #FCE3DD; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5h14v10H9l-4 4z"></path></svg></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #1F5135">Como correu a tua semana?</strong><span style="font-size: 14px">Feedback da semana 13 · 2 minutos</span></div>
+<span aria-hidden="true" style="font-size: 20px; color: #1F5135">›</span>
+</a>
+
+<a href="App-Semana.dc.html" style="background: #FFFFFF; border-radius: 20px; padding: 16px; text-decoration: none; color: #2E2A26; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline"><strong style="font-size: 16px; color: #1F5135">O que estás a manter</strong><span aria-hidden="true" style="font-size: 20px; color: #1F5135">›</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 99px; background: #DDEFC8">Adesão ao plano · 6 dias</span>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 99px; background: #DDEFC8">Proteína · 5 dias</span>
+<span style="font-size: 13px; font-weight: 700; padding: 5px 10px; border-radius: 99px; background: #F2C26B">Água · 4 dias</span>
+</div>
+</a>
+
+
+<a href="App-Registar.dc.html" style="background: #FFFFFF; border-radius: 20px; padding: 16px; text-decoration: none; color: #2E2A26; display: flex; align-items: center; gap: 14px">
+<div style="width: 44px; height: 44px; flex: none; border-radius: 14px; background: #FBF6EE; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F5135" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 18 10 12l4 3 6-8"></path></svg></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px; color: #1F5135">Registar o peso desta semana</strong><span style="font-size: 14px">A Inês recebe os valores</span></div>
+<span aria-hidden="true" style="font-size: 20px; color: #1F5135">›</span>
+</a>
+</div>
+
+<nav aria-label="Separadores" style="background: #FFFFFF; border-top: 1px solid #EFE9DE; padding: 8px 4px 22px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr))">
+<a href="App-Inicio.dc.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #1F5135; font-size: 11px; font-weight: 800"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4z"></path></svg>Início</a>
+<a href="App-Plano.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"></path><path d="M9 9h6M9 13h6"></path></svg>Plano</a>
+<a href="App-Compras.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h11L21 8H7"></path><circle cx="9" cy="19.5" r="1.5"></circle><circle cx="17" cy="19.5" r="1.5"></circle></svg>Compras</a>
+<a href="App-Evolucao.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18 10 12l4 3 6-8"></path></svg>Evolução</a>
+<a href="App-Documentos.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 0; min-height: 44px; text-decoration: none; color: #5E574F; font-size: 11px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path></svg>Documentos</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
