@@ -4,6 +4,17 @@ As decisões são tomadas em brainstorming com o dono que está na sessão, e es
 
 As mais recentes ficam no topo.
 
+## 24 de novembro de 2026
+
+### O que entra na primeira versão
+- **Decisão:** a primeira versão inclui, além do que foi decidido na INU-2 e na INU-4:
+  - **Website:** página de reports, onde chegam os feedbacks semanais, as medições e as perguntas das pacientes; confirmar ou corrigir as medições registadas pelas pacientes; marcar em que supermercados se encontra cada alimento.
+  - **App:** registar peso e medidas; guia de compras por supermercado; leitor de código de barras que diz se o produto está no guia e em que refeição do plano entra.
+- **Fica para a fase seguinte:** diário alimentar com fotos e kcal estimadas por IA; gestor da equipa no website (convidar outras nutricionistas ou administradores).
+- **Quem:** Inês Nascimento.
+- **Porquê:** os reports e as medições pela paciente fecham o ciclo entre a app e o website. O guia de compras e o código de barras ajudam a paciente a seguir o plano no dia a dia. O diário com IA precisa de um serviço de IA alojado na Europa e tem mais riscos e custos, por isso espera.
+- **Para confirmar antes de construir:** licença da tabela do INSA; uso da base Open Food Facts (licença ODbL) para identificar os produtos pelo código de barras.
+
 ## 23 de novembro de 2026
 
 ### Perguntas do feedback semanal
