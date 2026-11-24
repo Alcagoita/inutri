@@ -1,6 +1,6 @@
 # inutri — visão do produto
 
-Conclusões da configuração do projeto (22 de novembro de 2026), para toda a equipa que vai trabalhar na inutri. As decisões vivem nas tarefas do Jira; este ficheiro resume-as e liga para elas.
+Conclusões da configuração do projeto (22 de novembro de 2026), para toda a equipa que vai trabalhar na inutri. As decisões são tomadas em brainstorming e ficam registadas em [decisoes.md](decisoes.md); este ficheiro resume-as.
 
 ## O que é
 Uma ferramenta de acompanhamento nutricional para pacientes em perda de peso, **com ou sem** terapêutica com agonistas de GLP-1.
@@ -26,7 +26,7 @@ Tem duas partes:
 3. **Só o profissional coloca documentos e ferramentas de apoio.**
 4. **Nenhuma recomendação médica.** A app regista as doses de GLP-1 indicadas pelo profissional e lembra o dia da toma, e mais nada.
 
-Uma mudança que quebre uma promessa precisa primeiro de uma tarefa de decisão no Jira.
+Uma mudança que quebre uma promessa precisa primeiro de uma decisão de um dos donos, registada em [decisoes.md](decisoes.md).
 
 ## Factos base
 1. Cada paciente tem um só profissional.
@@ -43,10 +43,11 @@ Uma mudança que quebre uma promessa precisa primeiro de uma tarefa de decisão 
 - Enviar dados de saúde para serviços fora da Europa.
 
 ## Primeira versão
-Decidido em [INU-2](https://olegarioncnascimento.atlassian.net/browse/INU-2). O website e a app ligam-se por um servidor comum, que guarda os dados de saúde na Europa.
-- **Website:** pacientes e planos (convite para a app, plano feito à mão com início e fim), documentos de apoio, registos de peso, perímetros e doses de GLP-1 com gráficos, e leitura dos feedbacks semanais.
-- **App do paciente:** plano e documentos (só leitura), feedback semanal com os comportamentos mantidos, a sua evolução, e o lembrete no dia da toma.
-- **Fica para depois:** mensagens entre nutricionista e paciente, e reports do plano além do feedback semanal.
+Decidida pela Inês (INU-2, INU-4 e brainstorming de 24/11/2026, ver [decisoes.md](decisoes.md)). Tarefas de execução: INU-5 a INU-22. O website e a app ligam-se por um servidor comum, que guarda os dados de saúde na Europa.
+- **Website:** login com verificação em dois passos; lista de pacientes e convite para a app; página de cada paciente (resumo e evolução, plano, documentos, ficha clínica privada); base de alimentos (tabela INSA, edição, alimentos à mão, supermercados); plano como dia tipo em folha de cálculo; medições (peso, cintura, anca, massa gorda, massa muscular) e doses de GLP-1 com gráficos; documentos de apoio; reports com os feedbacks, as medições das pacientes e as perguntas.
+- **App da paciente:** login e recuperação da palavra-passe; plano e documentos (só leitura); feedback semanal e o que está a manter; evolução com as doses e registo de medições; lembrete no dia da toma; guia de compras por supermercado; leitor de código de barras.
+- **Nos dois:** consentimento e privacidade antes de entrarem dados reais.
+- **Fica para depois:** diário alimentar com fotos e kcal estimadas pela IA; gestor da equipa no website; mensagens entre nutricionista e paciente.
 
 ## Marca e tom
 Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O nome da app ainda está em aberto.
@@ -61,5 +62,5 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 - As regras completas para a IA estão em [CLAUDE.md](../CLAUDE.md).
 
 ## Em aberto
-- **Nome da app e da marca.** Terá a sua própria tarefa de decisão.
-- **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide as tarefas de decisão; cada mudança precisa da aprovação do outro.
+- **Nome da app e da marca.** Ainda por decidir em brainstorming.
+- **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide em brainstorming; cada mudança precisa da aprovação do outro. O quadro do Jira só tem tarefas de execução.

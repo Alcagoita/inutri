@@ -4,7 +4,7 @@ Read by every AI session in this project. Built on Brush Frame: https://github.c
 
 ## Owners and decisions
 The project has **two owners with equal say on the product**: Olegário Nascimento (GitHub `Alcagoita`) and Inês Nascimento (GitHub `inesmcn27-bit`). Either owner is a **decider**:
-- **Decision tickets:** whichever owner is in the session decides (Avançar / Estacionar / Abandonar). **That decision is final**: it needs no input, review or confirmation from the other owner. Write the decision, who decided and why in the ticket, then carry on. Never write "to be decided by the project owner" or leave a decision waiting for the other owner.
+- **Decisions:** decisions are made in a brainstorming session with whichever owner is in it. **That owner's decision is final**: it needs no input, review or confirmation from the other owner. Write what was decided, who decided, the date and why in [docs/decisoes.md](docs/decisoes.md) (and in this file when it changes a rule, a promise or a model fact), then turn it into execution tasks. Never create a decision ticket, never write "to be decided by the project owner" and never leave a decision waiting for the other owner.
 - **Ticket assignee:** every ticket is assigned to the person who created it (the owner in the session). When you create a ticket, set the assignee to the current Jira user; when you find one without an assignee, assign it to its reporter.
 - **Pull requests:** every pull request needs one approval from the owner who did not open it. After that approval, either owner can say merge.
 - **GitHub:** the repository belongs to Olegário's account, so only he is a GitHub admin (repository settings, merging without an approval). Inês has write access, which is enough to approve and to merge after approval.
@@ -15,7 +15,7 @@ Both owners speak Portuguese (pt-PT): answer in the language they write in. Code
 A nutrition follow-up tool for weight-loss patients, with or without GLP-1 agonist medication. It has two sides: the **professional website**, where the nutrition professional builds each patient's plan, adds support documents and tools, and follows evolution charts (weight and body measurements); and the **patient mobile app**, where the patient reads their plan and their own data, fills a weekly feedback and plan reports, and gets a reminder on medication day.
 
 ## Product promises
-A change that breaks one needs a decision ticket first.
+A change that breaks one needs an owner's decision first, recorded in [docs/decisoes.md](docs/decisoes.md).
 - **Only the professional creates or changes a plan.** The patient can read it, never edit it.
 - **Every plan is built by hand for one patient.** Never generate, copy or suggest a plan automatically.
 - **Only the professional adds support documents and tools.** The patient can read them, never add or change them.
@@ -24,17 +24,22 @@ A change that breaks one needs a decision ticket first.
 ## Model facts
 - Each patient has exactly one professional.
 - A plan has a start and an end. A patient follows one plan at a time.
-- Feedback is weekly, with a fixed set of questions per group: one set for patients on GLP-1, another for patients without.
+- A plan is **one typical day** (meals with foods and quantities in grams), built by the professional in a spreadsheet that adds up energy and macronutrients from the food database. The food database starts from the INSA food composition table (licence to confirm), can be edited, takes foods added by hand, and records in which supermarkets the professional finds each food.
+- Feedback is weekly, with a fixed set of questions per group: one set for patients on GLP-1, another for patients without. The questions are listed in [docs/decisoes.md](docs/decisoes.md) ("Perguntas do feedback semanal"). Behaviours come first; weight and abdominal perimeter come last and are optional.
 - Whether a patient is on GLP-1 is recorded by the professional, and it changes the plan as well as the feedback questions.
-- For GLP-1 patients, the professional records each dose with its date, so doses can be compared over time with weight and body-measurement results.
+- For GLP-1 patients, the professional records each dose with its date, so doses can be compared over time with weight and body-measurement results. The patient sees the recorded doses in the app; the app never advises on doses or symptoms.
+- Measurements are weight, waist (abdominal perimeter), hip, fat mass and muscle mass. The professional records them on the website and the patient can record them in the app; a patient's entry reaches the professional's reports "to confirm".
+- Each patient has a **private clinical record** (personal and clinical data from the first visit, plus notes from each visit). Only the professional sees it; it is never sent to the app.
+- Patient accounts are created only by the professional (email invite). The website login uses two-step verification. Notification texts never carry health data.
 - Weight, body measurements and medication are health data: the most sensitive kind of personal data (GDPR special category).
 - Built with **Kotlin Multiplatform** (Android and iOS). The professional side is a **website** (decided in INU-2). The website and the app share one server, which stores health data in Europe.
 
 ## First version
-Decided in INU-2 (Inês Nascimento, 23 November 2026). Anything outside this list waits for its own ticket.
-- **Professional website:** create patients, invite them to the app and build each patient's plan by hand (with start and end); upload support documents and tools per patient; record weight, body measurements and GLP-1 doses with dates, and see evolution charts; read the patients' weekly feedback.
-- **Patient app (Android and iOS):** read the plan and support documents; fill the weekly feedback (questions for the GLP-1 or non-GLP-1 group) and see the behaviours being kept; see their own evolution (weight and body measurements); a reminder on medication day (GLP-1 patients).
-- **Later, not in the first version:** messages between professional and patient (the open question at the end of the weekly feedback covers this for now); plan reports beyond the weekly feedback.
+Decided by Inês Nascimento (INU-2 and INU-4 on 23 November 2026; scope closed on 24 November 2026, see [docs/decisoes.md](docs/decisoes.md)). Execution tasks: INU-5 to INU-22. Anything outside this list needs an owner's decision first.
+- **Professional website:** login with two-step verification; patient list, create patients and invite them to the app; one page per patient (summary and evolution, plan, documents, private clinical record); food database (INSA table, edits, foods added by hand, supermarkets per food); plan as a typical day in a spreadsheet with automatic totals, published to the app; record measurements and GLP-1 doses with dates and see evolution charts; upload support documents; reports page with weekly feedback, patient measurements (confirm or correct) and patient questions.
+- **Patient app (Android and iOS):** login and password recovery (account created by the professional); home; read the plan and support documents; weekly feedback (GLP-1 or non-GLP-1 questions) and the behaviours being kept; evolution with recorded doses, and recording weight and measurements; medication-day reminder; shopping guide by supermarket; barcode reader that says whether a product is in the guide and in which meal of the plan.
+- **Both:** consent and privacy screens before any real patient data.
+- **Later, not in the first version:** food diary with meal photos and AI calorie estimates; website team management (inviting other professionals or administrators); messages between professional and patient (the open question at the end of the weekly feedback covers this for now).
 
 ## Brand and tone
 Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still open.
@@ -45,6 +50,7 @@ Decided in INU-3 (Inês Nascimento, 23 November 2026). The app's name is still o
 - **Words never used:** "milagre", "rápido", "dose recomendada", or anything else that promises results or gives medical advice.
 
 ## Workflow
+- **The board holds execution tasks only:** work with a visible result in the app or the website. Decisions come out of brainstorming (see Owners and decisions) and become execution tasks; they are never tickets themselves.
 - Tasks live in Jira, project **INU**: https://olegarioncnascimento.atlassian.net/jira/software/projects/INU. No work without a task.
 - The board has four columns: **To do, In development, Testing, Done**. Move the task yourself: **In development** when you start, **Testing** when the pull request opens, **Done** when it merges. If Jira can't be reached from here, tell the person which column to move it to.
 - Every commit and pull request title starts with the task's reference: `INU-12: …`. A hook and a CI check enforce it. Setup work uses `INU-0`.
@@ -83,13 +89,14 @@ The project has two protected lanes: `develop`, where finished work comes togeth
 6. Small slice first: run any job over a lot of data on a sample, check, then widen.
 7. When something breaks, ask what the person already knows before hunting. Root cause first, then the fix, then the tests.
 8. Never put keys, tokens or passwords in code, prompts, chat or this file. They live in local files that git ignores.
-9. Decisions go in tickets and in this file, never only in chat: the next session cannot see the chat.
+9. Decisions go in [docs/decisoes.md](docs/decisoes.md) and in this file, never only in chat: the next session cannot see the chat.
 10. Never use real patient data in tests, examples, fixtures, screenshots or prompts. Use made-up data only.
 11. Never add medical, medication or dose advice to the app, in any text, notification or feature.
 12. Never send health data to a service hosted outside Europe. Check where a service stores data before adding it.
 
 ## Memory
-Corrections that should hold for everyone become rules here, under Corrections, with why, the ticket and a review date. Decisions go in tickets. Personal preferences stay in each person's own tool memory. Never store ticket status, keys or tokens in any of them.
+Corrections that should hold for everyone become rules here, under Corrections, with why, the ticket and a review date. Decisions go in [docs/decisoes.md](docs/decisoes.md). Personal preferences stay in each person's own tool memory. Never store ticket status, keys or tokens in any of them.
 
 ## Corrections
 <!-- Each as: the rule — Why: … — Source: ticket, date — Review by: date. -->
+- **No decision tickets on the board.** Decisions are made in brainstorming and recorded in docs/decisoes.md; the Jira board holds only execution tasks with a visible result in the app or the website. — Why: the board should show the work being built, not discussions. — Source: Inês Nascimento, INU-0, 23 November 2026 — Review by: 23 February 2027.
