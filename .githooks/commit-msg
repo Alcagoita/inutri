@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 # Installed by the framework setup. Every commit starts with a ticket key.
 # The pattern lives in .github/ticket-key-pattern. Example: INU-12: add the invite link
-PATTERN_FILE="$(git rev-parse --show-toplevel)/.github/ticket-key-pattern"
-[ -f "$PATTERN_FILE" ] || exit 0
-PATTERN="$(head -1 "$PATTERN_FILE")"
+# Read from the last commit, so the commit that changes the pattern is checked by the one it replaces.
+PATTERN="$(git show HEAD:.github/ticket-key-pattern 2>/dev/null | head -1)"
+if [ -z "$PATTERN" ]; then
+  PATTERN_FILE="$(git rev-parse --show-toplevel)/.github/ticket-key-pattern"
+  [ -f "$PATTERN_FILE" ] || exit 0
+  PATTERN="$(head -1 "$PATTERN_FILE")"
+fi
 # First line that is not a git comment ("# ..."). "#12: ..." is a ticket key, not a comment.
 SUBJECT="$(sed -n '/^# /!{p;q;}' "$1")"
 if printf '%s' "$SUBJECT" | grep -Eq "$PATTERN"; then
