@@ -9,7 +9,7 @@ Goal
 <The one thing this ticket achieves.>
 
 Context
-<Why it is needed. Links to the decision ticket, design files or model facts.>
+<Why it is needed. Links to the decision in docs/decisoes.md, design files or model facts.>
 
 Done when
 - [ ] <A check someone can do>

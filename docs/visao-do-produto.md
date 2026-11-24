@@ -1,6 +1,6 @@
 # inutri — visão do produto
 
-Conclusões da configuração do projeto (22 de novembro de 2026), para toda a equipa que vai trabalhar na inutri. As decisões vivem nas tarefas do Jira; este ficheiro resume-as e liga para elas.
+Conclusões da configuração do projeto (22 de novembro de 2026), para toda a equipa que vai trabalhar na inutri. As decisões são tomadas em brainstorming e ficam registadas em [decisoes.md](decisoes.md); este ficheiro resume-as.
 
 ## O que é
 Uma ferramenta de acompanhamento nutricional para pacientes em perda de peso, **com ou sem** terapêutica com agonistas de GLP-1.
@@ -26,7 +26,7 @@ Tem duas partes:
 3. **Só o profissional coloca documentos e ferramentas de apoio.**
 4. **Nenhuma recomendação médica.** A app regista as doses de GLP-1 indicadas pelo profissional e lembra o dia da toma, e mais nada.
 
-Uma mudança que quebre uma promessa precisa primeiro de uma tarefa de decisão no Jira.
+Uma mudança que quebre uma promessa precisa primeiro de uma decisão de um dos donos, registada em [decisoes.md](decisoes.md).
 
 ## Factos base
 1. Cada paciente tem um só profissional.
@@ -57,4 +57,4 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 ## Em aberto
 - **Onde corre a parte do profissional:** computador, web ou a mesma app? Ver [INU-2](https://olegarioncnascimento.atlassian.net/browse/INU-2).
 - **O que entra na primeira versão.** Também em INU-2.
-- **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide as tarefas de decisão; cada mudança precisa da aprovação do outro.
+- **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide em brainstorming; cada mudança precisa da aprovação do outro. O quadro do Jira só tem tarefas de execução.
