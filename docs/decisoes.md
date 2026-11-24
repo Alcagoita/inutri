@@ -4,6 +4,20 @@ As decisões são tomadas em brainstorming com o dono que está na sessão, e es
 
 As mais recentes ficam no topo.
 
+## 24 de novembro de 2026 — detalhes para as tarefas
+
+Decididos pelo Olegário Nascimento ao rever as tarefas INU-5 a INU-28. O modelo de dados completo está em [modelo-de-dados.md](modelo-de-dados.md).
+
+- **Unidades:** peso em kg; cintura e anca em cm; massa gorda e massa muscular em **kg ou %**, guardadas com a unidade usada em cada registo. A nutricionista escolhe como os gráficos de cada paciente as mostram, e a conversão usa o peso do mesmo dia (sem peso nesse dia, mostra-se a unidade registada). Dose = medicamento + mg + data.
+- **Estados do feedback:** respostas em dias (0–7): *Correu bem* 5–7, *A construir* 3–4, *Ficou para a próxima* 0–2; ao contrário para "comer entre refeições, fora do plano". Respostas de três opções: melhor, meio, pior.
+- **Resposta ao feedback:** a nutricionista escreve **uma resposta curta** a cada feedback semanal, que a paciente vê na app. Não é um chat.
+- **Guia de compras:** são os **alimentos do plano**, filtrados pelo supermercado escolhido. Cada alimento tem uma secção (fruta, laticínios, …) na base de alimentos.
+- **Sugestões por IA na base de alimentos:** **fora da primeira versão.** A nutricionista escreve os valores ou copia-os do rótulo. Sem custos nem serviços extra.
+- **Alterar um plano publicado:** cria uma **nova versão**; publicar substitui o que a app mostra, e todas as versões publicadas ficam no histórico. Os planos de uma paciente nunca se sobrepõem.
+- **Filtro "plano a terminar":** planos que acabam nos próximos **7 dias**, com uma mensagem para marcar também a próxima consulta.
+- **Desativar o acesso:** a paciente deixa de entrar; os dados ficam todos e o acesso pode ser reativado. Apagar dados é um pedido à parte (INU-22).
+- **Alojamento do website:** **Cloudflare Pages**. Só guarda os ficheiros do site; os dados ficam na Supabase (UE).
+
 ## 24 de novembro de 2026 — arquitetura técnica
 
 Brainstorming de arquitetura com o Olegário Nascimento. Desbloqueia a [INU-5](https://olegarioncnascimento.atlassian.net/browse/INU-5).

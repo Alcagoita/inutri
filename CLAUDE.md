@@ -38,7 +38,9 @@ A change that breaks one needs an owner's decision first, recorded in [docs/deci
 Decided by Olegário Nascimento on 24 November 2026 (see [docs/decisoes.md](docs/decisoes.md), "arquitetura técnica").
 - **Backend:** Supabase in the EU region (Frankfurt): PostgreSQL, Auth, Storage and row-level security. Two projects: **test** (made-up data only) and **production**. Every patient row belongs to one professional; row-level security enforces it, and the patient API can never read the private clinical record.
 - **Shared rules live in the database** (plan totals, feedback questions), so the app and the website compute the same results.
-- **Website:** React + TypeScript with the official Supabase client. Where it is hosted is still open (prefer Europe); it stores no health data itself.
+- **Website:** React + TypeScript with the official Supabase client, hosted on Cloudflare Pages (site files only; it stores no health data).
+- **Data model:** [docs/modelo-de-dados.md](docs/modelo-de-dados.md) is the single source for tables, fields, units and access rules. Change it in its own pull request before building on a change.
+- **Repository layout:** `app/` (Kotlin Multiplatform), `web/` (React), `supabase/` (migrations, functions, tests).
 - **App:** Kotlin Multiplatform (Android and iOS) with the Supabase Kotlin client.
 - **Professional login (website):** email and password, then a passkey (fingerprint, Touch ID, Windows Hello) as the second step, with a code by email as fallback. Session lasts 7 days on the same computer; "Sair" ends it at once. Confirm Supabase Auth supports these factors before building; if not, bring it back to an owner.
 - **Patient login (app):** email and password, no sign-up. The professional creates the account; the patient gets an email and sets the password on a small web page that only sets and resets passwords. The app keeps the session and asks for Face ID, fingerprint or the phone code when opened.

@@ -65,6 +65,5 @@ Decidido em [INU-3](https://olegarioncnascimento.atlassian.net/browse/INU-3). O 
 
 ## Em aberto
 - **Nome da app e da marca.** Ainda por decidir em brainstorming.
-- **Onde fica alojado o website** (de preferência na Europa).
 - **Confirmar** que a Supabase suporta passkeys e código por email como segundo passo do login da nutricionista.
 - **Equipa:** dois donos com o mesmo poder de decisão, Olegário e Inês. Qualquer um decide em brainstorming; cada mudança precisa da aprovação do outro. O quadro do Jira só tem tarefas de execução.
