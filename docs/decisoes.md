@@ -4,6 +4,18 @@ As decisões são tomadas em brainstorming com o dono que está na sessão, e es
 
 As mais recentes ficam no topo.
 
+## 28 de novembro de 2026 — endereço temporário do website
+
+- **Decisão:** enquanto a app não tem nome nem domínio, o website de teste funciona no endereço gratuito do **Cloudflare Pages** (`<projeto>.pages.dev`), ligado ao projeto Supabase de **teste**. Cada pull request tem também um link de pré-visualização próprio. Quando houver nome, compra-se o domínio e liga-se no Cloudflare; o endereço `pages.dev` continua a funcionar.
+- **Regras até haver domínio:**
+  - O nome "inutri" fica **num só sítio** da configuração (app e website), para mudar numa linha.
+  - Os links do login e da palavra-passe (Supabase Auth) aceitam o endereço `pages.dev`; quando houver domínio, acrescenta-se.
+  - As passkeys ficam ligadas ao endereço: as de teste no `pages.dev`; voltam a registar-se uma vez no domínio final.
+  - Os emails de teste (Brevo) saem de um único endereço verificado; no domínio final verificam-se SPF e DKIM.
+  - **Nenhuma paciente real antes do domínio final** (e dos textos legais e acordos de dados).
+- **Quem:** Olegário Nascimento.
+- **Porquê:** não comprar um domínio antes do nome, sem parar o trabalho: o website é construído e testado online desde o início, no mesmo serviço que vai usar em produção.
+
 ## 24 de novembro de 2026 — detalhes para as tarefas
 
 Decididos pelo Olegário Nascimento ao rever as tarefas INU-5 a INU-28. O modelo de dados completo está em [modelo-de-dados.md](modelo-de-dados.md).
